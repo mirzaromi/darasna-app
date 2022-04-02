@@ -32,8 +32,8 @@
 
     <!-- favicons
  ================================================== -->
-    <link rel="shortcut icon" href="/assets/Abstract 1.0 Free Website Template - Free-CSS.com/Abstract10/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/assets/Abstract 1.0 Free Website Template - Free-CSS.com/Abstract10/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/image/hhf.png" type="image/x-icon">
+    <link rel="icon" href="/assets/image/hhf.png" type="image/x-icon">
 
 </head>
 
@@ -54,7 +54,7 @@
             <nav id="main-nav-wrap">
                 <ul class="main-navigation sf-menu">
                     <li class="current"><a href="index.html" title="">Home</a></li>
-                    <li class="has-children">
+                    {{-- <li class="has-children">
                         <a href="category.html" title="">Categories</a>
                         <ul class="sub-menu">
                             <li><a href="category.html">Wordpress</a></li>
@@ -64,8 +64,8 @@
                             <li><a href="category.html">Mockups</a></li>
                             <li><a href="category.html">Branding</a></li>
                         </ul>
-                    </li>
-                    <li class="has-children">
+                    </li> --}}
+                    {{-- <li class="has-children">
                         <a href="single-standard.html" title="">Blog</a>
                         <ul class="sub-menu">
                             <li><a href="single-video.html">Video Post</a></li>
@@ -73,13 +73,13 @@
                             <li><a href="single-gallery.html">Gallery Post</a></li>
                             <li><a href="single-standard.html">Standard Post</a></li>
                         </ul>
-                    </li>
-                    <li><a href="style-guide.html" title="">Styles</a></li>
-                    <li><a href="about.html" title="">About</a></li>
+                    </li> --}}
+                    <li><a href="style-guide.html" title="">Blog</a></li>
                     <li><a href="contact.html" title="">Contact</a></li>
+                    <li><a href="about.html" title="">About Us</a></li>
                 </ul>
             </nav> <!-- end main-nav-wrap -->
-
+{{-- 
             <div class="search-wrap">
 
                 <form role="search" method="get" class="search-form" action="#">
@@ -93,12 +93,12 @@
 
                 <a href="#" id="close-search" class="close-btn">Close</a>
 
-            </div> <!-- end search wrap -->
+            </div> <!-- end search wrap --> --}}
 
-            <div class="triggers">
+            {{-- <div class="triggers">
                 <a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
                 <a class="menu-toggle" href="#"><span>Menu</span></a>
-            </div> <!-- end triggers -->
+            </div> <!-- end triggers --> --}}
 
         </div>
 
