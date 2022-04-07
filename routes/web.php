@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -32,3 +33,5 @@ Route::get('/admin/home', function(){
 
 Route::get('/admin/post/check_slug', [PostController::class, 'check_slug'])->middleware('auth');
 Route::resource('/admin/post',PostController::class)->middleware('auth');
+
+Route::resource('/admin/user', UserController::class)->middleware('auth');

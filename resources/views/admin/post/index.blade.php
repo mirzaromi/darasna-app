@@ -14,24 +14,24 @@
                 <h3 class="card-title">Daftar Seluruh Post</h3>
             </div>
             <!-- /.card-header -->
-                <div class="card-body">
-                    <a href="/admin/post/create">
-                        <button type="button" class="btn btn-success mb-3"><i class="fas fa-plus mr-2"></i>Tambah
-                            Postingan</button>
-                    </a>
-                    <table id="example1" class="table table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Judul</th>
-                                <th>Kategori</th>
-                                <th>Tag</th>
-                                <th>Author</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($posts as $post) 
+            <div class="card-body">
+                <a href="/admin/post/create">
+                    <button type="button" class="btn btn-success mb-3"><i class="fas fa-plus mr-2"></i>Tambah
+                        Postingan</button>
+                </a>
+                <table id="example1" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Judul</th>
+                            <th>Kategori</th>
+                            <th>Tag</th>
+                            <th>Author</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($posts as $post)
                             <tr>
                                 <td>{{ $post->id }}</td>
                                 <td>{{ $post->judul }}</td>
@@ -40,14 +40,16 @@
                                 <td>{{ $post->author_id }}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-success">
-                                            <a href="/admin/post/{{ $post->id }}" class="text-white"><i
-                                                    class="far fa-eye"></i></a>
-                                        </button>
-                                        <button type="button" class="btn btn-warning">
-                                            <a href="/admin/post/{{ $post->id }}/edit" class="text-white"><i
-                                                    class="far fa-edit"></i></a>
-                                        </button>
+                                        <a href="/admin/post/{{ $post->id }}" class="text-white">
+                                            <button type="button" class="btn btn-success">
+                                                <i class="far fa-eye"></i>
+                                            </button>
+                                        </a>
+                                        <a href="/admin/post/{{ $post->id }}/edit" class="text-white">
+                                            <button type="button" class="btn btn-warning text-light">
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </a>
                                         <button type="button" class="btn btn-danger" data-toggle="modal"
                                             data-target="#modal-default-{{ $post->id }}">
                                             <i class="fas fa-trash-alt"></i>
@@ -82,20 +84,20 @@
                                     </div>
                                 </td>
                             </tr>
-                            @endforeach                            
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>No</th>
-                                <th>Judul</th>
-                                <th>Kategori</th>
-                                <th>Tag</th>
-                                <th>Author</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
+                        @endforeach
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>No</th>
+                            <th>Judul</th>
+                            <th>Kategori</th>
+                            <th>Tag</th>
+                            <th>Author</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
             <!-- /.card-body -->
         </div>
     </div>
