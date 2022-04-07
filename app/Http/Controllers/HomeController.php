@@ -12,8 +12,7 @@ class HomeController extends Controller
     {
         
         return view('public.index',[
-            'data' => Post::get(),
-            'title1' => 'dashboard'
+            'data' => Post::latest()->take(4)->get(),
         ]);
     }
 }
