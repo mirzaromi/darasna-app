@@ -5,20 +5,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Darasna Net | Starter</title>
-    <link rel="icon" href="/assets/image/hhf.png" type="image/x-icon">
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="/assets/admin/plugins/fontawesome-free/css/all.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="/assets/admin/dist/css/adminlte.min.css">
-
-</head>
+@include('admin.partial.head')
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -177,56 +164,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
 
             <!-- Sidebar -->
-            <div class="sidebar">
-                <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="/assets/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
-                            alt="User Image">
-                    </div>
-                    <div class="info">
-                        <a href="/assets/admin/#" class="d-block">Admin</a>
-                    </div>
-                </div>
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-                        <li class="nav-item">
-                            <a href="pages/widgets.html" class="nav-link active">
-                                <i class="nav-icon fas fa-chart-bar"></i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-open">
-                            <a href="/assets/admin/#" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Starter Pages
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="/assets/admin/#" class="nav-link ">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Active Page</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/assets/admin/#" class="nav-link ">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Inactive Page</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- /.sidebar-menu -->
-            </div>
+            @include('admin.partial.sidebar')
             <!-- /.sidebar -->
         </aside>
 
@@ -254,9 +192,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="container-fluid">
-                            @yield('container')
-                        </div>
+                        @yield('container')
                         <!-- /.col-md-6 -->
                     </div>
                     <!-- /.row -->
@@ -289,14 +225,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
     <!-- ./wrapper -->
 
-    <!-- REQUIRED SCRIPTS -->
-
-    <!-- jQuery -->
-    <script src="/assets/admin/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="/assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="/assets/admin/dist/js/adminlte.min.js"></script>
+@include('admin.partial.footer')
 </body>
 
 </html>
