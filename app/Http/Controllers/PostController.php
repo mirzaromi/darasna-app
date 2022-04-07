@@ -15,7 +15,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('admin.post.index');
+        return view('admin.post.index',[
+            'title1' => 'post',
+            'title2' => 'daftar_post',
+            'posts' => Post::get()
+        ]);
     }
 
     /**
