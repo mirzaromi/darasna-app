@@ -54,7 +54,7 @@ class PostController extends Controller
         ]);
 
         Post::create($validate);
-        return redirect('/admin/post')->with('sukses', 'sukses menambahkan post baru');
+        return redirect('/admin/post')->with('sukses', 'sukses menambahkan post baru!');
     }
 
     /**
@@ -65,7 +65,11 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('admin.post.show',[
+            'title1' => 'post',
+            'title2' => 'daftar_post',
+            'post' => $post
+        ]);
     }
 
     /**
@@ -76,7 +80,11 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('admin.post.edit',[
+            'title1' => 'post',
+            'title2' => 'daftar_post',
+            'post' => $post
+        ]);
     }
 
     /**
@@ -86,9 +94,18 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePostRequest $request, Post $post)
+    public function update(Request $request, Post $post)
     {
-        //
+        $validate = $request->validate([
+            'judul' => 'required',
+            'slug' => 'required',
+            'isi' => 'required',
+            'kategori' => 'required',
+            'tag' => 'required'
+        ]);
+
+        Post::where('id', $post->id)->update($validate);
+        return redirect('/admin/post')->with('sukses', 'sukses mengubah postingan!');
     }
 
     /**
@@ -99,7 +116,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        Post::destroy($post->id);
+
+        return redirect('/admin/post')->with('sukses', 'sukses menghapus postingan!');
     }
 
     public function check_slug(Request $request)
