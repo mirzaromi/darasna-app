@@ -24,7 +24,11 @@ Route::post('/login', [LoginController::class,'authenticate']);
 Route::get('/logout', [LoginController::class,'logout']);
 
 Route::get('/admin/home', function(){
-    return view('admin.index');
+    return view('admin.index',[
+        'title1' => 'dashboard',
+        'title2' => ''
+    ]);
 })->middleware('auth');
 
+Route::get('/admin/post/check_slug', [PostController::class, 'check_slug'])->middleware('auth');
 Route::resource('/admin/post',PostController::class)->middleware('auth');

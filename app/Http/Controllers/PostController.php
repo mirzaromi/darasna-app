@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use Illuminate\Http\Request;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class PostController extends Controller
 {
@@ -29,7 +31,10 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.post.create',[
+            'title1' => 'post',
+            'title2' => 'daftar_post',
+        ]);
     }
 
     /**
@@ -38,9 +43,18 @@ class PostController extends Controller
      * @param  \App\Http\Requests\StorePostRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePostRequest $request)
+    public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'judul' => 'required',
+            'slug' => 'required',
+            'isi' => 'required',
+            'kategori' => 'required',
+            'tag' => 'required'
+        ]);
+
+        Post::create($validate);
+        return redirect('/admin/post')->with('sukses', 'sukses menambahkan post baru');
     }
 
     /**
@@ -86,5 +100,11 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         //
+    }
+
+    public function check_slug(Request $request)
+    {
+        $slug = SlugService::createSlug(Post::class, 'slug', $request->judul);
+        return response()->json(['slug' => $slug]);
     }
 }

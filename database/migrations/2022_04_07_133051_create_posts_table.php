@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('isi');
             $table->string('kategori');
             $table->string('tag');
-            $table->foreignId('author_id');
+            $table->foreignId('author_id')->nullable();
             $table->string('slug')->unique();
             $table->string('foto')->nullable();
             $table->timestamps();
