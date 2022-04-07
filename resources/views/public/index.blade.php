@@ -29,33 +29,7 @@
             <!-- Start header -->
             <header
                 class="header-wraper jl_header_magazine_style two_header_top_style header_layout_style3_custom jl_cusdate_head">
-                <div class="header_top_bar_wrapper ">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="menu-primary-container navigation_wrapper">
-                                    <ul id="jl_top_menu" class="jl_main_menu">
-                                        <li
-                                            class="menu-item menu-item-home current-menu-item page_item page-item-4212 current_page_item menu-item-4461">
-                                            <a href="/assets/disto/#" aria-current="page">Home<span class="border-menu"></span></a>
-                                        </li>
-                                        <li class="menu-item menu-item-3602"><a href="/assets/disto/#">Member<span
-                                                    class="border-menu"></span></a>
-                                        </li>
-                                        <li class="menu-item menu-item-3606"><a href="/assets/disto/#">special offer<span
-                                                    class="border-menu"></span></a>
-                                        </li>
-                                        <li class="menu-item menu-item-3598"><a href="/assets/disto/#">Info!!<span
-                                                    class="border-menu"></span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="jl_top_bar_right"> <span class="jl_current_title">Current Date:</span> 7
-                                    July, 2020</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- Start Main menu -->
                 <div class="jl_blank_nav"></div>
                 <div id="menu_wrapper" class="menu_wrapper jl_menu_sticky jl_stick ">
@@ -65,8 +39,8 @@
                                 <div class="logo_small_wrapper_table">
                                     <div class="logo_small_wrapper">
                                         <!-- begin logo -->
-                                        <a class="logo_link" href="/assets/disto/index.html">
-                                            <img src="/assets/disto/img/logo.png" alt="Just another WordPress site" />
+                                        <a class="logo_link" href="/">
+                                            <img src="/assets/image/hhf.png" alt="Just another WordPress site" />
                                         </a>
                                         <!-- end logo -->
                                     </div>
@@ -357,14 +331,11 @@
                                     </div>
                                     <div class="menu_mobile_share_wrapper">
                                         <ul class="social_icon_header_top">
-                                            <li><a class="facebook" href="/assets/disto/#" target="_blank"><i
-                                                        class="fa fa-facebook"></i></a>
+                                            <li><a class="instagram" href="/assets/disto/#" target="_blank"><i
+                                                        class="fa fa-instagram"></i></a>
                                             </li>
-                                            <li><a class="google_plus" href="/assets/disto/#" target="_blank"><i
-                                                        class="fa fa-google-plus"></i></a>
-                                            </li>
-                                            <li><a class="behance" href="/assets/disto/#" target="_blank"><i
-                                                        class="fa fa-behance"></i></a>
+                                            <li><a class="youtube" href="/assets/disto/#" target="_blank"><i
+                                                        class="fa fa-youtube"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -503,8 +474,8 @@
                             <div class="jellywp_about_us_widget_wrapper">
                                 <div class="social_icons_widget">
                                     <ul class="social-icons-list-widget icons_about_widget_display">
-                                        <li><a href="/assets/disto/#" class="facebook" target="_blank"><i
-                                                    class="fa fa-facebook"></i></a>
+                                        <li><a href="/assets/disto/#" class="instagram" target="_blank"><i
+                                                    class="fa fa-instagram"></i></a>
                                         </li>
                                         <li><a href="/assets/disto/#" class="google_plus" target="_blank"><i
                                                     class="fa fa-google-plus"></i></a>
@@ -1685,8 +1656,8 @@
                                                     <li><a href="/assets/disto/#" class="facebook" target="_blank"><i
                                                                 class="fa fa-facebook"></i></a>
                                                     </li>
-                                                    <li><a href="/assets/disto/#" class="google_plus" target="_blank"><i
-                                                                class="fa fa-google-plus"></i></a>
+                                                    <li><a href="/assets/disto/#" class="youtube" target="_blank"><i
+                                                                class="fa fa-youtube"></i></a>
                                                     </li>
                                                     <li><a href="/assets/disto/#" class="behance" target="_blank"><i
                                                                 class="fa fa-behance"></i></a>
