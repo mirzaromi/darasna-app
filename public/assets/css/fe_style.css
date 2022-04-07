@@ -1,0 +1,17 @@
+.nav-logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-logo a img {
+    margin: 10px;
+}
+
+.nav-logo .nav-brand-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-logo .nav-brand-name p {
+    margin: 0;
+}

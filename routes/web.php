@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('public.index');
-});
+Route::get('/', [HomeController::class,'index']);
 
 Route::get('/admin', [LoginController::class,'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class,'authenticate']);
@@ -25,3 +26,5 @@ Route::get('/logout', [LoginController::class,'logout']);
 Route::get('/admin/home', function(){
     return view('admin.index');
 })->middleware('auth');
+
+Route::resource('/admin/post',PostController::class)->middleware('auth');

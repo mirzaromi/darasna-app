@@ -1,3 +1,4 @@
+@dd($data)
 <!DOCTYPE html>
 <!--[if IE 9 ]>
 <html class="ie ie9" lang="en-US">
@@ -20,6 +21,7 @@
     <link rel="stylesheet" href="/assets/disto/css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/assets/disto/css/responsive.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/assets/disto/css/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/assets/css/fe_style.css">
     <!-- end head -->
 </head>
 
@@ -39,9 +41,15 @@
                                 <div class="logo_small_wrapper_table">
                                     <div class="logo_small_wrapper">
                                         <!-- begin logo -->
-                                        <a class="logo_link" href="/">
-                                            <img src="/assets/image/hhf.png" alt="Just another WordPress site" />
-                                        </a>
+                                        <div class="nav-logo">
+                                            <a class="logo_link" href="/">
+                                                <img src="/assets/image/hhf.png" alt="Just another WordPress site" />
+                                            </a>
+                                            <div class="nav-brand-name">
+                                                <p>Darasna</p>
+                                                <p>Network</p>
+                                            </div>
+                                        </div>
                                         <!-- end logo -->
                                     </div>
                                 </div>
