@@ -13,12 +13,8 @@ class="header-wraper jl_header_magazine_style two_header_top_style header_layout
                         <!-- begin logo -->
                         <div class="nav-logo">
                             <a class="logo_link" href="/">
-                                <img src="/assets/image/hhf.png" alt="Just another WordPress site" />
+                                <img src="/assets/image/LOGO DARASNA NETWORK BY HERI AULIA R FLAT 1.png" alt="Just another WordPress site" />
                             </a>
-                            <div class="nav-brand-name">
-                                <p>Darasna</p>
-                                <p>Network</p>
-                            </div>
                         </div>
                         <!-- end logo -->
                     </div>

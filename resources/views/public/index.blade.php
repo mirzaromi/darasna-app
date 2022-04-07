@@ -21,198 +21,60 @@
                                         <div class="col-md-12">
                                             <div class="large_center_slider_wrapper">
                                                 <div class="home_slider_header_tab jelly_loading_pro">
-                                                    <div class="item">
-                                                        <div class="banner-carousel-item"> <span
-                                                                class="image_grid_header_absolute"
-                                                                style="background-image: url('img/1920x982.png')"></span>
-                                                            <a href="/assets/disto/#"
-                                                                class="link_grid_header_absolute"></a>
-                                                            <div class="banner-container">
-                                                                <div class="container">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <div class="banner-inside-wrapper"> <span
-                                                                                    class="meta-category-small"><a
-                                                                                        class="post-category-color-text"
-                                                                                        style="background:#0015ff"
-                                                                                        href="/assets/disto/#">Business</a></span>
-                                                                                <h5><a href="/assets/disto/#">People are
-                                                                                        enjoy the job
-                                                                                        that they love</a></h5>
-                                                                                <span class="jl_post_meta"><span
-                                                                                        class="jl_author_img_w"> <img
-                                                                                            src="/assets/disto/img/favicon.jpg"
-                                                                                            width="30" height="30"
-                                                                                            alt="Anna Nikova"
-                                                                                            class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                                            href="/assets/disto/#"
-                                                                                            title="Posts by Anna Nikova"
-                                                                                            rel="author">Anna
-                                                                                            Nikova</a></span><span
-                                                                                        class="post-date"><i
-                                                                                            class="fa fa-clock-o"></i>Dec
-                                                                                        24, 2016</span></span>
+                                                    @foreach ($posts as $post)
+                                                        <div class="item">
+                                                            <div class="banner-carousel-item"> <span
+                                                                    class="image_grid_header_absolute"
+                                                                    style="background-image: url('img/1920x982.png')"></span>
+                                                                <a href="/assets/disto/#"
+                                                                    class="link_grid_header_absolute"></a>
+                                                                <div class="banner-container">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div class="banner-inside-wrapper">
+                                                                                    <span class="meta-category-small"><a
+                                                                                            class="post-category-color-text"
+                                                                                            style="background:#0015ff"
+                                                                                            href="/assets/disto/#">{{ $post->kategori }}</a></span>
+                                                                                    <h5><a
+                                                                                            href="/assets/disto/#">{{ $post->judul }}</a>
+                                                                                    </h5>
+                                                                                    <span class="jl_post_meta"><span
+                                                                                            class="jl_author_img_w">
+                                                                                            <img src="/assets/disto/img/favicon.jpg"
+                                                                                                width="30" height="30"
+                                                                                                alt="Anna Nikova"
+                                                                                                class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
+                                                                                                href="/assets/disto/#"
+                                                                                                title="Posts by Anna Nikova"
+                                                                                                rel="author">Anna
+                                                                                                Nikova</a></span><span
+                                                                                            class="post-date"><i
+                                                                                                class="fa fa-clock-o"></i>{{ $post->created_at }}</span></span>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="banner-carousel-item"> <span
-                                                                class="image_grid_header_absolute"
-                                                                style="background-image: url('img/1920x982.png')"></span>
-                                                            <a href="/assets/disto/#"
-                                                                class="link_grid_header_absolute"></a>
-                                                            <div class="banner-container">
-                                                                <div class="container">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <div class="banner-inside-wrapper"> <span
-                                                                                    class="meta-category-small"><a
-                                                                                        class="post-category-color-text"
-                                                                                        style="background:#6b34ba"
-                                                                                        href="/assets/disto/#">Gaming</a></span>
-                                                                                <h5><a href="/assets/disto/#">Every
-                                                                                        photographer needs
-                                                                                        to shoot this photo</a></h5>
-                                                                                <span class="jl_post_meta"><span
-                                                                                        class="jl_author_img_w"> <img
-                                                                                            src="/assets/disto/img/favicon.jpg"
-                                                                                            width="30" height="30"
-                                                                                            alt="Anna Nikova"
-                                                                                            class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                                            href="/assets/disto/#"
-                                                                                            title="Posts by Anna Nikova"
-                                                                                            rel="author">Anna
-                                                                                            Nikova</a></span><span
-                                                                                        class="post-date"><i
-                                                                                            class="fa fa-clock-o"></i>Dec
-                                                                                        24, 2016</span></span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="banner-carousel-item"> <span
-                                                                class="image_grid_header_absolute"
-                                                                style="background-image: url('img/1920x982.png')"></span>
-                                                            <a href="/assets/disto/#"
-                                                                class="link_grid_header_absolute"></a>
-                                                            <div class="banner-container">
-                                                                <div class="container">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <div class="banner-inside-wrapper"> <span
-                                                                                    class="meta-category-small"><a
-                                                                                        class="post-category-color-text"
-                                                                                        style="background:#ed1c1c"
-                                                                                        href="/assets/disto/#">Active</a></span>
-                                                                                <h5><a href="/assets/disto/#">Have a
-                                                                                        good time with my
-                                                                                        friend and enjoyed</a></h5>
-                                                                                <span class="jl_post_meta"><span
-                                                                                        class="jl_author_img_w"> <img
-                                                                                            src="/assets/disto/img/favicon.jpg"
-                                                                                            width="30" height="30"
-                                                                                            alt="Anna Nikova"
-                                                                                            class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                                            href="/assets/disto/#"
-                                                                                            title="Posts by Anna Nikova"
-                                                                                            rel="author">Anna
-                                                                                            Nikova</a></span><span
-                                                                                        class="post-date"><i
-                                                                                            class="fa fa-clock-o"></i>Dec
-                                                                                        24, 2016</span></span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="banner-carousel-item"> <span
-                                                                class="image_grid_header_absolute"
-                                                                style="background-image: url('img/1920x982.png')"></span>
-                                                            <a href="/assets/disto/#"
-                                                                class="link_grid_header_absolute"></a>
-                                                            <div class="banner-container">
-                                                                <div class="container">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <div class="banner-inside-wrapper"> <span
-                                                                                    class="meta-category-small"><a
-                                                                                        class="post-category-color-text"
-                                                                                        style="background:#d66300"
-                                                                                        href="/assets/disto/#">Science</a></span>
-                                                                                <h5><a href="/assets/disto/#">This is a
-                                                                                        great photo
-                                                                                        and nice for shooting</a></h5>
-                                                                                <span class="jl_post_meta"><span
-                                                                                        class="jl_author_img_w"> <img
-                                                                                            src="/assets/disto/img/favicon.jpg"
-                                                                                            width="30" height="30"
-                                                                                            alt="Anna Nikova"
-                                                                                            class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                                            href="/assets/disto/#"
-                                                                                            title="Posts by Anna Nikova"
-                                                                                            rel="author">Anna
-                                                                                            Nikova</a></span><span
-                                                                                        class="post-date"><i
-                                                                                            class="fa fa-clock-o"></i>Dec
-                                                                                        24, 2016</span></span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    @endforeach
                                                 </div>
                                                 <div class="jlslide_tab_nav_container">
                                                     <div class="jlslide_tab_nav_row">
                                                         <div class="home_slider_header_tab_nav news_tiker_loading_pro">
-                                                            <div class="item">
-                                                                <div class="banner-carousel-item"> <span
-                                                                        class="image_small_nav"
-                                                                        style="background-image: url('img/120x120.png')"></span>
-                                                                    <h5>
-                                                                        People are enjoy the job that they love
-                                                                    </h5>
+                                                            @foreach ($posts as $post)
+                                                                <div class="item">
+                                                                    <div class="banner-carousel-item"> <span
+                                                                            class="image_small_nav"
+                                                                            style="background-image: url('img/120x120.png')"></span>
+                                                                        <h5>
+                                                                            {{ $post->judul }}
+                                                                        </h5>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="item">
-                                                                <div class="banner-carousel-item"> <span
-                                                                        class="image_small_nav"
-                                                                        style="background-image: url('img/120x120.png')"></span>
-                                                                    <h5>
-                                                                        Every photographer needs to shoot this photo
-                                                                    </h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="item">
-                                                                <div class="banner-carousel-item"> <span
-                                                                        class="image_small_nav"
-                                                                        style="background-image: url('img/120x120.png')"></span>
-                                                                    <h5>
-                                                                        Have a good time with my friend and enjoyed
-                                                                    </h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="item">
-                                                                <div class="banner-carousel-item"> <span
-                                                                        class="image_small_nav"
-                                                                        style="background-image: url('img/120x120.png')"></span>
-                                                                    <h5>
-                                                                        This is a great photo and nice for shooting
-                                                                    </h5>
-                                                                </div>
-                                                            </div>
+                                                            @endforeach
                                                         </div>
                                                     </div>
                                                 </div>
@@ -268,8 +130,8 @@
                                                                     class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                                     href="/assets/disto/#" title="Posts by Anna Nikova"
                                                                     rel="author">Anna Nikova</a></span><span
-                                                                class="post-date"><i
-                                                                    class="fa fa-clock-o"></i>Dec 24,
+                                                                class="post-date"><i class="fa fa-clock-o"></i>Dec
+                                                                24,
                                                                 2016</span></span>
                                                         <div class="content_post_grid">
                                                             <p>Mauris mattis auctor cursus. Phasellus tellus tellus,
@@ -304,8 +166,8 @@
                                                                     class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                                     href="/assets/disto/#" title="Posts by Anna Nikova"
                                                                     rel="author">Anna Nikova</a></span><span
-                                                                class="post-date"><i
-                                                                    class="fa fa-clock-o"></i>Dec 24,
+                                                                class="post-date"><i class="fa fa-clock-o"></i>Dec
+                                                                24,
                                                                 2016</span></span>
                                                         <div class="content_post_grid">
                                                             <p>Mauris mattis auctor cursus. Phasellus tellus tellus,
@@ -340,8 +202,8 @@
                                                                     class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                                     href="/assets/disto/#" title="Posts by Anna Nikova"
                                                                     rel="author">Anna Nikova</a></span><span
-                                                                class="post-date"><i
-                                                                    class="fa fa-clock-o"></i>Dec 24,
+                                                                class="post-date"><i class="fa fa-clock-o"></i>Dec
+                                                                24,
                                                                 2016</span></span>
                                                         <div class="content_post_grid">
                                                             <p>Mauris mattis auctor cursus. Phasellus tellus tellus,
