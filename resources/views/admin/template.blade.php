@@ -150,6 +150,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <i class="fas fa-th-large"></i>
                     </a>
                 </li> --}}
+                <li class="nav-item">
+                    <a href="/logout">
+                        <button class="btn btn-danger">Log Out</button>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.navbar -->

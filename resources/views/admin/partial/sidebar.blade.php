@@ -42,7 +42,7 @@
                 <a href="/admin/user" class="nav-link {{ $title1 === 'user' ? 'active' : '' }}">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
-                        Post
+                        User Admin
                         <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
@@ -50,7 +50,7 @@
                     <li class="nav-item ">
                         <a href="/admin/user" class="nav-link {{ $title2 === 'daftar_user' ? 'active' : '' }}">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Daftar Post</p>
+                            <p>Daftar User Admin</p>
                         </a>
                     </li>                    
                 </ul>

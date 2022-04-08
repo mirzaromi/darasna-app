@@ -28,7 +28,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user.create',[
+            'title1' => 'user',
+            'title2' => 'daftar_user',
+        ]);
     }
 
     /**
@@ -39,7 +42,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        $validate['password'] = bcrypt($validate['password']);
+
+        User::create($validate);
+
+        return redirect('/admin/user')->with('sukses', 'sukses menambahkan user baru!');
     }
 
     /**
@@ -61,7 +73,11 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('admin.user.edit',[
+            'title1' => 'user',
+            'title2' => 'daftar_user',
+            'user' => $user
+        ]);
     }
 
     /**
@@ -73,7 +89,14 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $validate = $request->validate([
+            'username' => 'required',
+            'password' => 'required|min:6',
+        ]);
+
+        User::where('id', $user->id)->update($validate);
+
+        return redirect('/admin/user')->with('sukses', 'sukses memperbarui user!');
     }
 
     /**
@@ -84,6 +107,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        User::destroy($user->id);
+
+        return redirect('/admin/user')->with('sukses', 'sukses menghapus user!');
     }
 }
