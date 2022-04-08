@@ -94,6 +94,8 @@ class UserController extends Controller
             'password' => 'required|min:6',
         ]);
 
+        $validate['password'] = bcrypt($validate['password']);
+
         User::where('id', $user->id)->update($validate);
 
         return redirect('/admin/user')->with('sukses', 'sukses memperbarui user!');
