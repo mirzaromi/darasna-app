@@ -1,3 +1,4 @@
+a
 <!DOCTYPE html>
 <!--[if IE 9 ]>
 <html class="ie ie9" lang="en-US">
@@ -26,8 +27,14 @@
                                                             <div class="banner-carousel-item"> <span
                                                                     class="image_grid_header_absolute"
                                                                     style="background-image: url('{{ $post->foto }}')"></span>
-                                                                <a href="/assets/disto/#"
-                                                                    class="link_grid_header_absolute"></a>
+                                                                {{-- <form id="form" action="{{ route('increment_post', ['slug' => $post->slug]) }}" method="POST">
+                                                                    @csrf
+                                                                </form>
+                                                                <a href="" onclick="document.getElementById('form').submit()"></a> --}}
+                                                                {{-- <form action="" method="post">
+                                                                    <a href="" class="link_grid_header_absolute" type="submit"></a>
+                                                                    {{-- <a href="/post/{{ $post->slug }}" class="link_grid_header_absolute" type="submit"></a> 
+                                                                </form> --}}
                                                                 <div class="banner-container">
                                                                     <div class="container">
                                                                         <div class="row">
@@ -38,18 +45,17 @@
                                                                                             style="background:#0015ff"
                                                                                             href="/assets/disto/#">{{ $post->kategori }}</a></span>
                                                                                     <h5><a
-                                                                                            href="/assets/disto/#">{{ $post->judul }}</a>
+                                                                                            href="/post/{{ $post->slug }}">{{ $post->judul }}</a>
                                                                                     </h5>
                                                                                     <span class="jl_post_meta"><span
                                                                                             class="jl_author_img_w">
                                                                                             <img src="/assets/disto/img/favicon.jpg"
                                                                                                 width="30" height="30"
-                                                                                                alt="Anna Nikova"
+                                                                                                alt="{{ $post->author->nama }}"
                                                                                                 class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                                                href="/assets/disto/#"
-                                                                                                title="Posts by Anna Nikova"
-                                                                                                rel="author">Anna
-                                                                                                Nikova</a></span><span
+                                                                                                href="/author/{{ $post->author->slug }}"
+                                                                                                title="Posts by {{ $post->author->nama }}"
+                                                                                                rel="author">{{ $post->author->nama }}</a></span><span
                                                                                             class="post-date"><i
                                                                                                 class="fa fa-clock-o"></i>{{ $post->created_at }}</span></span>
                                                                                 </div>
@@ -105,225 +111,47 @@
                                     </div>
                                     <div class="jl_wrapper_row">
                                         <div class="row">
-                                            <div class="col-md-4 blog_grid_post_style  jl_row_1">
-                                                <div class="jl_grid_box_wrapper">
-                                                    <div class="image-post-thumb">
-                                                        <a href="/assets/disto/#" class="link_image featured-thumbnail"
-                                                            title="This is a great photo and nice for shooting">
-                                                            <img width="780" height="450"
-                                                                src="/assets/image/780 x 450.png"
-                                                                class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
-                                                                alt="" />
-                                                            <div class="background_over_image"></div>
-                                                        </a> <span class="meta-category-small"><a
-                                                                class="post-category-color-text"
-                                                                style="background:#d66300"
-                                                                href="/assets/disto/#">Science</a></span>
-                                                    </div>
-                                                    <div class="post-entry-content">
-                                                        <h3 class="image-post-title"><a href="/assets/disto/#">
-                                                                This is a great photo and nice for shooting</a>
-                                                        </h3>
-                                                        <span class="jl_post_meta"><span class="jl_author_img_w">
-                                                                <img src="/assets/image/780 x 450.png" width="30"
-                                                                    height="30" alt="Anna Nikova"
-                                                                    class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                    href="/assets/disto/#" title="Posts by Anna Nikova"
-                                                                    rel="author">Anna Nikova</a></span><span
-                                                                class="post-date"><i class="fa fa-clock-o"></i>Dec
-                                                                24,
-                                                                2016</span></span>
-                                                        <div class="content_post_grid">
-                                                            <p>Mauris mattis auctor cursus. Phasellus tellus tellus,
-                                                                imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula
-                                                                luctus nunc in...</p>
+                                            @foreach ($posts_latest as $post_latest)
+                                                <div class="col-md-4 blog_grid_post_style  jl_row_1">
+                                                    <div class="jl_grid_box_wrapper">
+                                                        <div class="image-post-thumb">
+                                                            <a href="/assets/disto/#"
+                                                                class="link_image featured-thumbnail"
+                                                                title="This is a great photo and nice for shooting">
+                                                                <img width="780" height="450"
+                                                                    src="/assets/image/780 x 450.png"
+                                                                    class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
+                                                                    alt="" />
+                                                                <div class="background_over_image"></div>
+                                                            </a> <span class="meta-category-small"><a
+                                                                    class="post-category-color-text"
+                                                                    style="background:#d66300"
+                                                                    href="/assets/disto/#">{{ $post_latest->kategori }}</a></span>
+                                                        </div>
+                                                        <div class="post-entry-content">
+                                                            <h3 class="image-post-title"><a href="/assets/disto/#">
+                                                                    This is a great photo and nice for shooting</a>
+                                                            </h3>
+                                                            <span class="jl_post_meta"><span class="jl_author_img_w">
+                                                                    <img src="/assets/image/780 x 450.png" width="30"
+                                                                        height="30" alt="Anna Nikova"
+                                                                        class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
+                                                                        href="/assets/disto/#"
+                                                                        title="Posts by Anna Nikova" rel="author">Anna
+                                                                        Nikova</a></span><span class="post-date"><i
+                                                                        class="fa fa-clock-o"></i>Dec
+                                                                    24,
+                                                                    2016</span></span>
+                                                            <div class="content_post_grid">
+                                                                <p>Mauris mattis auctor cursus. Phasellus tellus tellus,
+                                                                    imperdiet ut imperdiet eu, iaculis a sem. Donec
+                                                                    vehicula
+                                                                    luctus nunc in...</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4 blog_grid_post_style  jl_row_2">
-                                                <div class="jl_grid_box_wrapper">
-                                                    <div class="image-post-thumb">
-                                                        <a href="/assets/disto/#" class="link_image featured-thumbnail"
-                                                            title="This big boss is work hard and also play hard">
-                                                            <img width="780" height="450"
-                                                                src="/assets/image/780 x 450.png"
-                                                                class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
-                                                                alt="" />
-                                                            <div class="background_over_image"></div>
-                                                        </a> <span class="meta-category-small"><a
-                                                                class="post-category-color-text"
-                                                                style="background:#36c942"
-                                                                href="/assets/disto/#">Sports</a></span>
-                                                    </div>
-                                                    <div class="post-entry-content">
-                                                        <h3 class="image-post-title"><a href="/assets/disto/#">
-                                                                This big boss is work hard and also play hard</a>
-                                                        </h3>
-                                                        <span class="jl_post_meta"><span class="jl_author_img_w">
-                                                                <img src="/assets/disto/img/favicon.jpg" width="30"
-                                                                    height="30" alt="Anna Nikova"
-                                                                    class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                    href="/assets/disto/#" title="Posts by Anna Nikova"
-                                                                    rel="author">Anna Nikova</a></span><span
-                                                                class="post-date"><i class="fa fa-clock-o"></i>Dec
-                                                                24,
-                                                                2016</span></span>
-                                                        <div class="content_post_grid">
-                                                            <p>Mauris mattis auctor cursus. Phasellus tellus tellus,
-                                                                imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula
-                                                                luctus nunc in...</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 blog_grid_post_style  jl_row_3">
-                                                <div class="jl_grid_box_wrapper">
-                                                    <div class="image-post-thumb">
-                                                        <a href="/assets/disto/#" class="link_image featured-thumbnail"
-                                                            title="Enjoy a great view of flower before the sunset">
-                                                            <img width="780" height="450"
-                                                                src="/assets/image/780 x 450.png"
-                                                                class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
-                                                                alt="" />
-                                                            <div class="background_over_image"></div>
-                                                        </a> <span class="meta-category-small"><a
-                                                                class="post-category-color-text"
-                                                                style="background:#36c942"
-                                                                href="/assets/disto/#">Sports</a></span>
-                                                    </div>
-                                                    <div class="post-entry-content">
-                                                        <h3 class="image-post-title"><a href="/assets/disto/#">
-                                                                Enjoy a great view of flower before the sunset</a>
-                                                        </h3>
-                                                        <span class="jl_post_meta"><span class="jl_author_img_w">
-                                                                <img src="/assets/disto/img/favicon.jpg" width="30"
-                                                                    height="30" alt="Anna Nikova"
-                                                                    class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                    href="/assets/disto/#" title="Posts by Anna Nikova"
-                                                                    rel="author">Anna Nikova</a></span><span
-                                                                class="post-date"><i class="fa fa-clock-o"></i>Dec
-                                                                24,
-                                                                2016</span></span>
-                                                        <div class="content_post_grid">
-                                                            <p>Mauris mattis auctor cursus. Phasellus tellus tellus,
-                                                                imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula
-                                                                luctus nunc in...</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="clear_line_3col_home"></div>
-                                            <div class="col-md-4 blog_grid_post_style  jl_row_4">
-                                                <div class="jl_grid_box_wrapper">
-                                                    <div class="image-post-thumb">
-                                                        <a href="/assets/disto/#" class="link_image featured-thumbnail"
-                                                            title="We are best friends and we been every where">
-                                                            <img width="780" height="450"
-                                                                src="/assets/image/780 x 450.png"
-                                                                class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
-                                                                alt="" />
-                                                            <div class="background_over_image"></div>
-                                                        </a> <span class="meta-category-small"><a
-                                                                class="post-category-color-text"
-                                                                style="background:#6b34ba"
-                                                                href="/assets/disto/#">Gaming</a></span>
-                                                    </div>
-                                                    <div class="post-entry-content">
-                                                        <h3 class="image-post-title"><a href="/assets/disto/#">
-                                                                We are best friends and we been every where</a>
-                                                        </h3>
-                                                        <span class="jl_post_meta"><span class="jl_author_img_w">
-                                                                <img src="/assets/disto/img/favicon.jpg" width="30"
-                                                                    height="30" alt="Anna Nikova"
-                                                                    class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                    href="/assets/disto/#" title="Posts by Anna Nikova"
-                                                                    rel="author">Anna Nikova</a></span><span
-                                                                class="post-date"><i
-                                                                    class="fa fa-clock-o"></i>Dec 24,
-                                                                2016</span></span>
-                                                        <div class="content_post_grid">
-                                                            <p>Mauris mattis auctor cursus. Phasellus tellus tellus,
-                                                                imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula
-                                                                luctus nunc in...</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 blog_grid_post_style  jl_row_5">
-                                                <div class="jl_grid_box_wrapper">
-                                                    <div class="image-post-thumb">
-                                                        <a href="/assets/disto/#" class="link_image featured-thumbnail"
-                                                            title="This thing is strong and make your job good">
-                                                            <img width="780" height="450"
-                                                                src="/assets/image/780 x 450.png"
-                                                                class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
-                                                                alt="" />
-                                                            <div class="background_over_image"></div>
-                                                        </a> <span class="meta-category-small"><a
-                                                                class="post-category-color-text"
-                                                                style="background:#ed1c1c"
-                                                                href="/assets/disto/#">Active</a></span>
-                                                        <span class="jl_post_type_icon"><i
-                                                                class="la la-camera"></i></span>
-                                                    </div>
-                                                    <div class="post-entry-content">
-                                                        <h3 class="image-post-title"><a href="/assets/disto/#">
-                                                                This thing is strong and make your job good</a>
-                                                        </h3>
-                                                        <span class="jl_post_meta"><span class="jl_author_img_w">
-                                                                <img src="/assets/disto/img/favicon.jpg" width="30"
-                                                                    height="30" alt="Anna Nikova"
-                                                                    class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                    href="/assets/disto/#" title="Posts by Anna Nikova"
-                                                                    rel="author">Anna Nikova</a></span><span
-                                                                class="post-date"><i
-                                                                    class="fa fa-clock-o"></i>Dec 24,
-                                                                2016</span></span>
-                                                        <div class="content_post_grid">
-                                                            <p>Mauris mattis auctor cursus. Phasellus tellus tellus,
-                                                                imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula
-                                                                luctus nunc in...</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 blog_grid_post_style  jl_row_6">
-                                                <div class="jl_grid_box_wrapper">
-                                                    <div class="image-post-thumb">
-                                                        <a href="/assets/disto/#" class="link_image featured-thumbnail"
-                                                            title="Nice photo shooting with hand classic style">
-                                                            <img width="780" height="450"
-                                                                src="/assets/image/780 x 450.png"
-                                                                class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
-                                                                alt="" />
-                                                            <div class="background_over_image"></div>
-                                                        </a> <span class="meta-category-small"><a
-                                                                class="post-category-color-text"
-                                                                style="background:#0015ff"
-                                                                href="/assets/disto/#">Business</a></span>
-                                                    </div>
-                                                    <div class="post-entry-content">
-                                                        <h3 class="image-post-title"><a href="/assets/disto/#">
-                                                                Nice photo shooting with hand classic style</a>
-                                                        </h3>
-                                                        <span class="jl_post_meta"><span class="jl_author_img_w">
-                                                                <img src="/assets/disto/img/favicon.jpg" width="30"
-                                                                    height="30" alt="Anna Nikova"
-                                                                    class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                    href="/assets/disto/#" title="Posts by Anna Nikova"
-                                                                    rel="author">Anna Nikova</a></span><span
-                                                                class="post-date"><i
-                                                                    class="fa fa-clock-o"></i>Dec 24,
-                                                                2016</span></span>
-                                                        <div class="content_post_grid">
-                                                            <p>Mauris mattis auctor cursus. Phasellus tellus tellus,
-                                                                imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula
-                                                                luctus nunc in...</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                             <div class="clear_line_3col_home"></div>
                                         </div>
                                     </div>
@@ -580,8 +408,8 @@
             </div>
             <!-- end content -->
             <!-- Start footer -->
-            
-    @include('public.partial.footer')
+
+            @include('public.partial.footer')
 </body>
 
 </html>

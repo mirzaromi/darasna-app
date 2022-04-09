@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AuthorController;
 
 
 /*
@@ -24,7 +25,10 @@ Route::get('/admin', [LoginController::class,'index'])->middleware('guest')->nam
 Route::post('/login', [LoginController::class,'authenticate']);
 Route::get('/logout', [LoginController::class,'logout']);
 
-Route::get('/post/{slug}',[PostController::class,'single_post']);
+Route::post('/post/inc/{slug}',[PostController::class,'inc_post_watch'])->name('increment_post');
+Route::get('/post/{slug}',[PostController::class,'single_post'])->name('post');
+Route::get('/author/{slug}',[AuthorController::class,'author']);
+
 
 
 Route::get('/admin/home', function(){
@@ -38,3 +42,5 @@ Route::get('/admin/post/check_slug', [PostController::class, 'check_slug'])->mid
 Route::resource('/admin/post',PostController::class)->middleware('auth');
 
 Route::resource('/admin/user', UserController::class)->middleware('auth');
+
+Route::resource('/author', AuthorController::class);

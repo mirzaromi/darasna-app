@@ -134,4 +134,11 @@ class PostController extends Controller
             'post' => Post::where('slug', $slug)->get()
         ]);
     }
+
+    public function inc_post_watch($slug)
+    {
+        Post::find($slug)->increment('watch');
+        
+        return redirect()->route('post', ['slug' => $slug]);
+    }
 }
