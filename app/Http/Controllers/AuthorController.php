@@ -15,7 +15,7 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        //
+        return view('public.author.index');
     }
 
     /**
@@ -82,5 +82,13 @@ class AuthorController extends Controller
     public function destroy(Author $author)
     {
         //
+    }
+
+    public function author($slug)
+    {
+        return view('public.author.index',[
+            'title1' => 'author',
+            'authors' => Author::where('slug', $slug)->get(),
+        ]);
     }
 }

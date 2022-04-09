@@ -123,7 +123,7 @@
                                                         class="avatar avatar-165 wp-user-avatar wp-user-avatar-165 alignnone photo" />
                                                 </div>
                                                 <div class="author-description">
-                                                    <h5><a href="#">
+                                                    <h5><a href="/author/{{ $post[0]->author->slug }}">
                                                             {{ $post[0]->author->nama }}</a></h5>
                                                     <p>
                                                         welcome Mauris mattis auctor cursus. Phasellus tellus tellus,
