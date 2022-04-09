@@ -40,10 +40,9 @@
                                                     {{ $post[0]->judul }} </h1>                                                
                                                 <span class="single-post-meta-wrapper"><span
                                                         class="post-author"><span><img src="/assets/disto/img/favicon.jpg"
-                                                                width="50" height="50" alt="Anna Nikova"
+                                                                width="50" height="50" alt="{{ $post[0]->author->nama }}"
                                                                 class="avatar avatar-50 wp-user-avatar wp-user-avatar-50 alignnone photo" /><a
-                                                                href="#" title="Posts by Anna Nikova" rel="author">Anna
-                                                                Nikova</a></span></span><span
+                                                                href="#" title="Posts by {{ $post[0]->author->nama }}" rel="author">{{ $post[0]->author->nama }}</a></span></span><span
                                                         class="post-date updated"><i class="fa fa-clock-o"></i>Dec
                                                         23, 2016</span><span class="meta-comment"><i
                                                             class="fa fa-comment"></i><a href="#">0
@@ -120,12 +119,12 @@
                                             <div class="author-info">
                                                 <div class="author-avatar">
                                                     <img src="/assets/disto/img/favicon.jpg" width="165" height="165"
-                                                        alt="Anna Nikova"
+                                                        alt="{{ $post[0]->author->nama }}"
                                                         class="avatar avatar-165 wp-user-avatar wp-user-avatar-165 alignnone photo" />
                                                 </div>
                                                 <div class="author-description">
                                                     <h5><a href="#">
-                                                            Anna Nikova</a></h5>
+                                                            {{ $post[0]->author->nama }}</a></h5>
                                                     <p>
                                                         welcome Mauris mattis auctor cursus. Phasellus tellus tellus,
                                                         imperdiet ut imperdiet eu, iaculis a sem. Donec vehicula luctus

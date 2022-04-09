@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use App\Models\Author;
 
 class Post extends Model
 {
@@ -19,5 +20,10 @@ class Post extends Model
                 'source' => 'title'
             ]
         ];
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(Author::class);
     }
 }

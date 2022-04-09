@@ -126,4 +126,12 @@ class PostController extends Controller
         $slug = SlugService::createSlug(Post::class, 'slug', $request->judul);
         return response()->json(['slug' => $slug]);
     }
+
+    public function single_post($slug)
+    {
+        return view('public.post.single_post',[
+            'title1' => 'Post',
+            'post' => Post::where('slug', $slug)->get()
+        ]);
+    }
 }

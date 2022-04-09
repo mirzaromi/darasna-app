@@ -24,6 +24,9 @@ Route::get('/admin', [LoginController::class,'index'])->middleware('guest')->nam
 Route::post('/login', [LoginController::class,'authenticate']);
 Route::get('/logout', [LoginController::class,'logout']);
 
+Route::get('/post/{slug}',[PostController::class,'single_post']);
+
+
 Route::get('/admin/home', function(){
     return view('admin.index',[
         'title1' => 'dashboard',
