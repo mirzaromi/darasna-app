@@ -127,11 +127,17 @@ class PostController extends Controller
         return response()->json(['slug' => $slug]);
     }
 
-    public function single_post($slug)
+    public function single_post($slug, Post $post)
     {
+        $get_post = Post::where('slug',$slug)->get();
+        $watch = $get_post[0]->watch;
+        $watch++;
+        Post::where('slug', $slug)->update(['watch'=>$watch]);
+                
         return view('public.post.single_post',[
             'title1' => 'Post',
             'post' => Post::where('slug', $slug)->get()
         ]);
     }
+
 }

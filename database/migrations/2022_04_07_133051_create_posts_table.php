@@ -22,6 +22,7 @@ class CreatePostsTable extends Migration
             $table->foreignId('author_id')->nullable();
             $table->string('slug')->unique();
             $table->string('foto')->nullable();
+            $table->integer('watch')->nullable();
             $table->timestamps();
         });
     }
