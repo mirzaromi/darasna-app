@@ -74,8 +74,7 @@
                                                                                                 title="Posts by {{ $c->author->nama }}"
                                                                                                 rel="author">{{ $c->author->nama }}</a></span><span
                                                                                             class="post-date"><i
-                                                                                                class="fa fa-clock-o"></i>Dec
-                                                                                            24, 2016</span></span>
+                                                                                                class="fa fa-clock-o"></i>{{\Carbon\Carbon::parse($c->created_at)->isoFormat('D MMM Y')}}</span></span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -170,14 +169,10 @@
                                                                         title="Posts by {{ $p->author->nama }}"
                                                                         rel="author">{{ $p->author->nama }}</a></span><span
                                                                     class="post-date"><i
-                                                                        class="fa fa-clock-o"></i>Dec
-                                                                    24,
-                                                                    2016</span></span>
+                                                                        class="fa fa-clock-o"></i>{{\Carbon\Carbon::parse($p->created_at)->isoFormat('D MMM Y')}}</span></span>
                                                             <div class="content_post_grid">
-                                                                <p>Mauris mattis auctor cursus. Phasellus tellus tellus,
-                                                                    imperdiet ut imperdiet eu, iaculis a sem. Donec
-                                                                    vehicula
-                                                                    luctus nunc in...</p>
+                                                                <p>{!! Str::of($p->isi)->words(20) !!} <a href="/post/{{ $p->slug }}">Baca lagi...</a></p>
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -210,7 +205,20 @@
                                             <a href="/post/{{ $popular_post[0]->slug }}" class="link_grid_header_absolute"
                                                 title="{{ $popular_post[0]->judul }}"></a>
                                             <div class="post-entry-content"> <span class="meta-category-small"><a
-                                                        class="post-category-color-text" style="background:#0015ff"
+                                                        class="post-category-color-text" 
+                                                        @switch($popular_post[0]->kategori) 
+                                                            @case('AKIDAH')
+                                                                style="background:#12b12c"
+                                                                @break
+                                                            @case('HUKUM')
+                                                                style="background:#b11212"
+                                                                @break
+                                                            @case('SEJARAH')
+                                                                style="background:#b1a212"
+                                                                @break
+                                                            @default
+                                                                style="background:#1232b1" 
+                                                        @endswitch
                                                         href="/assets/disto/#">{{ $popular_post[0]->kategori }}</a></span>
                                                 <h3 class="image-post-title"><a href="/post/{{ $popular_post[0]->slug }}">
                                                         {{ $popular_post[0]->judul }}</a>
@@ -221,7 +229,7 @@
                                                             class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                             href="/author/{{ $popular_post[0]->author->slug }}" title="Posts by {{ $popular_post[0]->author->nama }}"
                                                             rel="author">{{ $popular_post[0]->author->nama }}</a></span><span class="post-date"><i
-                                                            class="fa fa-clock-o"></i>Dec 24, 2016</span></span>
+                                                            class="fa fa-clock-o"></i>{{\Carbon\Carbon::parse($popular_post[0]->created_at)->isoFormat('D MMM Y')}}</span></span>
                                             </div>
                                         </div>
                                     </div>
@@ -235,14 +243,26 @@
                                                 <div class="background_over_image"></div>
                                             </a>
                                             <div class="item-details"> <span class="meta-category-small"><a
-                                                        class="post-category-color-text" style="background:#d1783c"
+                                                        class="post-category-color-text"
+                                                        @switch($o->kategori) 
+                                                            @case('AKIDAH')
+                                                                style="background:#12b12c"
+                                                                @break
+                                                            @case('HUKUM')
+                                                                style="background:#b11212"
+                                                                @break
+                                                            @case('SEJARAH')
+                                                                style="background:#b1a212"
+                                                                @break
+                                                            @default
+                                                                style="background:#1232b1" 
+                                                        @endswitch
                                                         href="/assets/disto/#">{{ $o->kategori }}</a></span>
                                                 <h3 class="feature-post-title"><a href="/post/{{ $o->slug }}">
                                                         {{ $o->judul }}</a>
                                                 </h3>
                                                 <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                                        class="post-date"><i class="fa fa-clock-o"></i>Dec 24,
-                                                        2016</span></span>
+                                                        class="post-date"><i class="fa fa-clock-o"></i>{{\Carbon\Carbon::parse($o->created_at)->isoFormat('D MMM Y')}}</span></span>
                                             </div>
                                         </div>
                                     @endforeach

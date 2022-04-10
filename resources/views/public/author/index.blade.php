@@ -45,10 +45,10 @@
                                                 data-aos="fade-up">
                                                 <div class="post_grid_content_wrapper">
                                                     <div class="image-post-thumb">
-                                                        <a href="#" class="link_image featured-thumbnail"
+                                                        <a href="/post/{{ $a->slug }}" class="link_image featured-thumbnail"
                                                             title="Round white dining table on brown hardwood">
                                                             <img width="780" height="450"
-                                                                src="/assets/disto/img/780x450.png"
+                                                                src="{{ $a->foto }}"
                                                                 class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
                                                                 alt="" />
                                                             <div class="background_over_image"></div>
@@ -59,7 +59,7 @@
                                                     <div class="post-entry-content">
                                                         <div class="post-entry-content-wrapper">
                                                             <div class="large_post_content">
-                                                                <h3 class="image-post-title"><a href="#">
+                                                                <h3 class="image-post-title"><a href="/post/{{ $a->slug }}">
                                                                         {{ $a->judul }}</a>
                                                                 </h3>
                                                                 <span class="jl_post_meta"><span
@@ -70,8 +70,7 @@
                                                                             href="#" title="Posts by Anna Nikova"
                                                                             rel="author">{{ $a->nama }}</a></span><span
                                                                         class="post-date"><i
-                                                                            class="fa fa-clock-o"></i>Mar 10,
-                                                                        2019</span></span>
+                                                                            class="fa fa-clock-o"></i>{{\Carbon\Carbon::parse($a->created_at)->isoFormat('D MMM Y')}}</span></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -325,6 +324,11 @@
             <!-- end content -->
             <!-- Start footer -->
             @include('public.partial.footer')
+        </div>
+    </div>
+    <div id="go-top"><a href="/assets/disto/#go-top"><i class="fa fa-angle-up"></i></a>
+    </div>
+    @include('public.partial.script')
 </body>
 
 </html>
