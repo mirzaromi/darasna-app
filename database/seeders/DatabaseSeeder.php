@@ -24,8 +24,20 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Author::create([
-            'nama' => 'Zinedine Zidane',
-            'slug' => 'zinedine-zidane'
+            'nama' => 'Muhammad Haikal',
+            'slug' => 'muhammad-haikal'
+        ]);
+        Author::create([
+            'nama' => 'Abdurrohman',
+            'slug' => 'abdurrohman'
+        ]);
+        Author::create([
+            'nama' => 'Amar Mar\'uf',
+            'slug' => 'Amar-ma\'ruf'
+        ]);
+        Author::create([
+            'nama' => 'Muzammil',
+            'slug' => 'muzammil'
         ]);
 
         $this->call([
