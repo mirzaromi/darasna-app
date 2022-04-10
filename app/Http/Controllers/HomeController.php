@@ -21,7 +21,7 @@ class HomeController extends Controller
         return view('public.index',[
             'title1' => 'Home',
             'carousel_posts' => $carousel_post,
-            'posts_latest' => Post::latest()->take(4)->get(),
+            'posts_latest' => Post::latest()->take(6)->get(),
         ]);
     }
 }
