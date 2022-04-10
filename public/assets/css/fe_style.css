@@ -15,3 +15,9 @@
 .nav-logo .nav-brand-name p {
     margin: 0;
 }
+
+.img_pop {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}

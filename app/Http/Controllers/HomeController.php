@@ -22,6 +22,8 @@ class HomeController extends Controller
             'title1' => 'Home',
             'carousel_posts' => $carousel_post,
             'posts_latest' => Post::latest()->take(6)->get(),
+            'popular_post' => Post::orderBy('view', 'desc')->take(1)->get(),
+            'other_pop_post' => Post::orderBy('view', 'desc')->skip(1)->take(4)->get(),
         ]);
     }
 }

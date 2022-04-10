@@ -201,107 +201,51 @@
                                 <div class="jl_main_with_right_post jelly_homepage_builder">
                                     <div class="homepage_builder_title">
                                         <h2 class="builder_title_home_page">
-                                            Top Of the week
+                                            Postingan paling populer
                                         </h2>
                                     </div>
                                     <div class="jl_main_post_style_padding">
                                         <div class="jl_main_post_style"> <span class="image_grid_header_absolute"
-                                                style="background-image: url('img/1920x982.png')"></span>
-                                            <a href="/assets/disto/#" class="link_grid_header_absolute"
-                                                title="It’s always fun time and smile in the summer"></a>
+                                                style="background-image: url('{{ $popular_post[0]->foto }}')"></span>
+                                            <a href="/post/{{ $popular_post[0]->slug }}" class="link_grid_header_absolute"
+                                                title="{{ $popular_post[0]->judul }}"></a>
                                             <div class="post-entry-content"> <span class="meta-category-small"><a
                                                         class="post-category-color-text" style="background:#0015ff"
-                                                        href="/assets/disto/#">Business</a></span>
-                                                <h3 class="image-post-title"><a href="/assets/disto/#">
-                                                        It’s always fun time and smile in the summer</a>
+                                                        href="/assets/disto/#">{{ $popular_post[0]->kategori }}</a></span>
+                                                <h3 class="image-post-title"><a href="/post/{{ $popular_post[0]->slug }}">
+                                                        {{ $popular_post[0]->judul }}</a>
                                                 </h3>
                                                 <span class="jl_post_meta"><span class="jl_author_img_w"> <img
                                                             src="/assets/disto/img/favicon.jpg" width="30" height="30"
-                                                            alt="Anna Nikova"
+                                                            alt="{{ $popular_post[0]->author->nama }}"
                                                             class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                            href="/assets/disto/#" title="Posts by Anna Nikova"
-                                                            rel="author">Anna
-                                                            Nikova</a></span><span class="post-date"><i
+                                                            href="/author/{{ $popular_post[0]->author->slug }}" title="Posts by {{ $popular_post[0]->author->nama }}"
+                                                            rel="author">{{ $popular_post[0]->author->nama }}</a></span><span class="post-date"><i
                                                             class="fa fa-clock-o"></i>Dec 24, 2016</span></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="jl_list_post_wrapper">
-                                        <a href="/assets/disto/#"
-                                            class="jl_small_format feature-image-link image_post featured-thumbnail">
-                                            <img width="120" height="120" src="/assets/disto/img/120x120.png"
-                                                class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                                alt="" />
-                                            <div class="background_over_image"></div>
-                                        </a>
-                                        <div class="item-details"> <span class="meta-category-small"><a
-                                                    class="post-category-color-text" style="background:#d1783c"
-                                                    href="/assets/disto/#">Crazy</a></span>
-                                            <h3 class="feature-post-title"><a href="/assets/disto/#">
-                                                    The great time for enjoy city view on mountain</a>
-                                            </h3>
-                                            <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                                    class="post-date"><i class="fa fa-clock-o"></i>Dec 24,
-                                                    2016</span></span>
+                                    @foreach ($other_pop_post as $o)
+                                        <div class="jl_list_post_wrapper">
+                                            <a href="/post/{{ $o->slug }}"
+                                                class="jl_small_format feature-image-link image_post featured-thumbnail">
+                                                <img width="100" height="100%" src="{{ $o->foto }}"
+                                                    class="attachment-disto_small_feature size-disto_small_feature wp-post-image img_pop"
+                                                    alt="" />
+                                                <div class="background_over_image"></div>
+                                            </a>
+                                            <div class="item-details"> <span class="meta-category-small"><a
+                                                        class="post-category-color-text" style="background:#d1783c"
+                                                        href="/assets/disto/#">{{ $o->kategori }}</a></span>
+                                                <h3 class="feature-post-title"><a href="/post/{{ $o->slug }}">
+                                                        {{ $o->judul }}</a>
+                                                </h3>
+                                                <span class="post-meta meta-main-img auto_image_with_date"> <span
+                                                        class="post-date"><i class="fa fa-clock-o"></i>Dec 24,
+                                                        2016</span></span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="jl_list_post_wrapper">
-                                        <a href="/assets/disto/#"
-                                            class="jl_small_format feature-image-link image_post featured-thumbnail">
-                                            <img width="120" height="120" src="/assets/disto/img/120x120.png"
-                                                class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                                alt="" />
-                                            <div class="background_over_image"></div>
-                                        </a>
-                                        <div class="item-details"> <span class="meta-category-small"><a
-                                                    class="post-category-color-text" style="background:#ed1c1c"
-                                                    href="/assets/disto/#">Active</a></span>
-                                            <h3 class="feature-post-title"><a href="/assets/disto/#">
-                                                    Your phone can take the best photo style</a>
-                                            </h3>
-                                            <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                                    class="post-date"><i class="fa fa-clock-o"></i>Dec 24,
-                                                    2016</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="jl_list_post_wrapper">
-                                        <a href="/assets/disto/#"
-                                            class="jl_small_format feature-image-link image_post featured-thumbnail">
-                                            <img width="120" height="120" src="/assets/disto/img/120x120.png"
-                                                class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                                alt="" />
-                                            <div class="background_over_image"></div>
-                                        </a>
-                                        <div class="item-details"> <span class="meta-category-small"><a
-                                                    class="post-category-color-text" style="background:#6b34ba"
-                                                    href="/assets/disto/#">Gaming</a></span>
-                                            <h3 class="feature-post-title"><a href="/assets/disto/#">
-                                                    Top 10 Best photo hunt of ice Rugby</a>
-                                            </h3>
-                                            <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                                    class="post-date"><i class="fa fa-clock-o"></i>Dec 24,
-                                                    2016</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="jl_list_post_wrapper">
-                                        <a href="/assets/disto/#"
-                                            class="jl_small_format feature-image-link image_post featured-thumbnail">
-                                            <img width="120" height="120" src="/assets/disto/img/favicon.jpg"
-                                                class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                                alt="" />
-                                            <div class="background_over_image"></div>
-                                        </a>
-                                        <div class="item-details"> <span class="meta-category-small"><a
-                                                    class="post-category-color-text" style="background:#d66300"
-                                                    href="/assets/disto/#">Science</a></span>
-                                            <h3 class="feature-post-title"><a href="/assets/disto/#">
-                                                    It really great holiday and enjoy with the sea</a>
-                                            </h3>
-                                            <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                                    class="post-date"><i class="fa fa-clock-o"></i>Dec 24,
-                                                    2016</span></span>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

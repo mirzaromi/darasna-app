@@ -14,3 +14,5 @@
 <link rel="stylesheet" href="/assets/disto/css/responsive.css" type="text/css" media="all" />
 <link rel="stylesheet" href="/assets/disto/css/main.css" type="text/css" media="all" />
 <!-- end head -->
+
+<link rel="stylesheet" href="/assets/css/fe_style.css">
