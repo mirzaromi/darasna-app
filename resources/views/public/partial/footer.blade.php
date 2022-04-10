@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col-md-4"> <span class="jl_none_space"></span>
                     <div id="disto_about_us_widget-3" class="widget jellywp_about_us_widget">
-                        <div class="widget_jl_wrapper about_widget_content"> <span class="jl_none_space"></span>
+                        <div class="widget_jl_wrapper about_widget_content"> <span
+                                class="jl_none_space"></span>
                             <div class="widget-title">
                                 <h2>About us</h2>
                             </div>
@@ -13,11 +14,56 @@
                                     imperdiet eu, iaculis a sem imperdiet ut imperdiet.</p>
                                 <div class="social_icons_widget">
                                     <ul class="social-icons-list-widget icons_about_widget_display">
-                                        <li><a href="/assets/disto/#" class="youtube" target="_blank"><i
-                                                    class="fa fa-youtube"></i></a>
+                                        <li><a href="/assets/disto/#" class="facebook"
+                                                target="_blank"><i class="fa fa-facebook"></i></a>
                                         </li>
-                                        <li><a href="/assets/disto/#" class="instagram" target="_blank"><i
-                                                    class="fa fa-instagram"></i></a>
+                                        <li><a href="/assets/disto/#" class="google_plus"
+                                                target="_blank"><i class="fa fa-google-plus"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="behance"
+                                                target="_blank"><i class="fa fa-behance"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="vimeo"
+                                                target="_blank"><i class="fa fa-vimeo-square"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="youtube"
+                                                target="_blank"><i class="fa fa-youtube"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="tumblr"
+                                                target="_blank"><i class="fa fa-tumblr"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="instagram"
+                                                target="_blank"><i class="fa fa-instagram"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="linkedin"
+                                                target="_blank"><i class="fa fa-linkedin"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="pinterest"
+                                                target="_blank"><i class="fa fa-pinterest"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="twitter"
+                                                target="_blank"><i class="fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="deviantart"
+                                                target="_blank"><i class="fa fa-deviantart"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="dribble"
+                                                target="_blank"><i class="fa fa-dribbble"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="dropbox"
+                                                target="_blank"><i class="fa fa-dropbox"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="rss"
+                                                target="_blank"><i class="fa fa-rss"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="skype"
+                                                target="_blank"><i class="fa fa-skype"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="stumbleupon"
+                                                target="_blank"><i class="fa fa-stumbleupon"></i></a>
+                                        </li>
+                                        <li><a href="/assets/disto/#" class="wordpress"
+                                                target="_blank"><i class="fa fa-wordpress"></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -29,12 +75,57 @@
                     <div id="disto_recent_post_widget-3" class="widget post_list_widget">
                         <div class="widget_jl_wrapper"> <span class="jl_none_space"></span>
                             <div class="widget-title">
-                                <h2>Get in Touch</h2>
+                                <h2>Recent Posts</h2>
                             </div>
                             <div>
-                                <p>Jl. KH. Abdul Chalim No. 1, Kembangbelor, Pacet, Kab. Mojokerto 61374</p>
-                                <p>darasnanet@gmail.com</p>
-                                <p>+62 888-8888-8888</p>
+                                <ul class="feature-post-list recent-post-widget">
+                                    <li>
+                                        <a href="/assets/disto/#"
+                                            class="jl_small_format feature-image-link image_post featured-thumbnail"
+                                            title="Round white dining table on brown hardwood">
+                                            <img width="120" height="120"
+                                                src="/assets/disto/img/120x120.png"
+                                                class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
+                                                alt="" />
+                                            <div class="background_over_image"></div>
+                                        </a>
+                                        <div class="item-details"> <span class="meta-category-small"><a
+                                                    class="post-category-color-text"
+                                                    style="background:#36c942"
+                                                    href="/assets/disto/#">Sports</a></span>
+                                            <h3 class="feature-post-title"><a href="/assets/disto/#">
+                                                    Round white dining table on brown hardwood</a>
+                                            </h3>
+                                            <span class="post-meta meta-main-img auto_image_with_date">
+                                                <span class="post-date"><i
+                                                        class="fa fa-clock-o"></i>Mar 10,
+                                                    2019</span></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/assets/disto/#"
+                                            class="jl_small_format feature-image-link image_post featured-thumbnail"
+                                            title="People are enjoy the job that they love">
+                                            <img width="120" height="120"
+                                                src="/assets/disto/img/120x120.png"
+                                                class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
+                                                alt="" />
+                                            <div class="background_over_image"></div>
+                                        </a>
+                                        <div class="item-details"> <span class="meta-category-small"><a
+                                                    class="post-category-color-text"
+                                                    style="background:#0015ff"
+                                                    href="/assets/disto/#">Business</a></span>
+                                            <h3 class="feature-post-title"><a href="/assets/disto/#">
+                                                    People are enjoy the job that they love</a>
+                                            </h3>
+                                            <span class="post-meta meta-main-img auto_image_with_date">
+                                                <span class="post-date"><i
+                                                        class="fa fa-clock-o"></i>Dec 24,
+                                                    2016</span></span>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div> <span class="jl_none_space"></span>
                         </div>
                     </div>
@@ -91,16 +182,3 @@
         </div>
     </div>
 </footer>
-<!-- End footer -->
-</div>
-</div>
-<div id="go-top"><a href="/assets/disto/#go-top"><i class="fa fa-angle-up"></i></a>
-</div>
-<script src="/assets/disto/js/jquery.js"></script>
-<script src="/assets/disto/js/fluidvids.js"></script>
-<script src="/assets/disto/js/infinitescroll.js"></script>
-<script src="/assets/disto/js/justified.js"></script>
-<script src="/assets/disto/js/slick.js"></script>
-<script src="/assets/disto/js/theia-sticky-sidebar.js"></script>
-<script src="/assets/disto/js/aos.js"></script>
-<script src="/assets/disto/js/custom.js"></script>
