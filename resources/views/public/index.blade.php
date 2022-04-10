@@ -27,14 +27,9 @@ a
                                                             <div class="banner-carousel-item"> <span
                                                                     class="image_grid_header_absolute"
                                                                     style="background-image: url('{{ $post->foto }}')"></span>
-                                                                {{-- <form id="form" action="{{ route('increment_post', ['slug' => $post->slug]) }}" method="POST">
-                                                                    @csrf
-                                                                </form>
-                                                                <a href="" onclick="document.getElementById('form').submit()"></a> --}}
-                                                                {{-- <form action="" method="post">
-                                                                    <a href="" class="link_grid_header_absolute" type="submit"></a>
-                                                                    {{-- <a href="/post/{{ $post->slug }}" class="link_grid_header_absolute" type="submit"></a> 
-                                                                </form> --}}
+                                                                
+                                                                    <a href="/post/{{ $post->slug }}" class="link_grid_header_absolute" type="submit"></a> 
+                                                                
                                                                 <div class="banner-container">
                                                                     <div class="container">
                                                                         <div class="row">
