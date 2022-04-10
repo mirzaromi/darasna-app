@@ -130,7 +130,7 @@ class PostController extends Controller
     public function single_post($slug, Post $post)
     {
         $get_post = Post::where('slug',$slug)->get();
-        $watch = $get_post[0]->watch;
+        $watch = $get_post[0]->view;
         $watch++;
         Post::where('slug', $slug)->update(['watch'=>$watch]);
                 
