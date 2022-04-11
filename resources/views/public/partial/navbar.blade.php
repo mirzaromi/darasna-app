@@ -38,8 +38,8 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item menu-item-has-children"> <a
-                                                href="#">Kategori<span class="border-menu"></span></a>
+                                        <li class="menu-item menu-item-has-children"> <a href="#">Kategori<span
+                                                    class="border-menu"></span></a>
                                             <ul class="sub-menu">
                                                 <li class="menu-item"> <a href="/category/AKIDAH">AKIDAH<span
                                                             class="border-menu"></span></a>
@@ -47,17 +47,18 @@
                                                 <li class="menu-item"> <a href="/category/HUKUM">HUKUM<span
                                                             class="border-menu"></span></a>
                                                 </li>
-                                                <li class="menu-item"><a
-                                                        href="/category/SEJARAH">SEJARAH<span
+                                                <li class="menu-item"><a href="/category/SEJARAH">SEJARAH<span
                                                             class="border-menu"></span></a>
                                                 </li>
-                                                <li class="menu-item"><a
-                                                        href="/category/TOKOH">TOKOH<span
+                                                <li class="menu-item"><a href="/category/TOKOH">TOKOH<span
                                                             class="border-menu"></span></a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="menu-item"><a href="/assets/disto/gaming.html">Contact Us<span
+                                                    class="border-menu"></span></a>
+                                        </li>
+                                        <li class="menu-item"><a href="/all_post">All Post<span
                                                     class="border-menu"></span></a>
                                         </li>
                                     </ul>
@@ -129,6 +130,8 @@
                         <li class="menu-item"><a href="/assets/disto/gaming.html">Contact Us<span
                                     class="border-menu"></span></a>
                         </li>
+                        <li class="menu-item"><a href="/all_post">All Post<span class="border-menu"></span></a>
+                        </li>
                     </ul>
                     <span class="jl_none_space"></span>
                     <div id="disto_about_us_widget-2" class="widget jellywp_about_us_widget">
@@ -136,8 +139,8 @@
                             <div class="jellywp_about_us_widget_wrapper">
                                 <div class="social_icons_widget">
                                     <ul class="social-icons-list-widget icons_about_widget_display">
-                                        <li><a class="instagram" href="/assets/disto/#" target="_blank" style="background-color: #b00b68"><i
-                                                    class="fa fa-instagram"></i></a>
+                                        <li><a class="instagram" href="/assets/disto/#" target="_blank"
+                                                style="background-color: #b00b68"><i class="fa fa-instagram"></i></a>
                                         </li>
                                         <li><a class="youtube" href="/assets/disto/#" target="_blank"><i
                                                     class="fa fa-youtube"></i></a>
@@ -148,4 +151,16 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="search_form_menu_personal">
+                <div class="menu_mobile_large_close"><span class="jl_close_wapper search_form_menu_personal_click"><span
+                            class="jl_close_1"></span><span class="jl_close_2"></span></span>
+                </div>
+                <form class="searchform_theme" action="/all_post">
+                    @csrf
+                    <input type="text" placeholder="Cari Postingan..." value="{{ request('cari') }}" name="cari"
+                        class="search_btn" />
+                    <button type="submit" class="button"><i class="fa fa-search"></i>
+                    </button>
+                </form>
             </div>

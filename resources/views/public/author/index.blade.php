@@ -3,24 +3,15 @@
 <html class="ie ie9" lang="en-US">
    <![endif]-->
 <html lang="en-US">
-
-@include('public.partial.head')
+<head>
+    @include('public.partial.head')
+</head>
 
 <body class="mobile_nav_class jl-has-sidebar">
     <div class="options_layout_wrapper jl_radius jl_none_box_styles jl_border_radiuss">
         <div class="options_layout_container full_layout_enable_front">
             <!-- Start header -->
             @include('public.partial.navbar')
-            <div class="search_form_menu_personal">
-                <div class="menu_mobile_large_close"><span class="jl_close_wapper search_form_menu_personal_click"><span
-                            class="jl_close_1"></span><span class="jl_close_2"></span></span>
-                </div>
-                <form method="get" class="searchform_theme" action="#">
-                    <input type="text" placeholder="Search..." value="" name="s" class="search_btn" />
-                    <button type="submit" class="button"><i class="fa fa-search"></i>
-                    </button>
-                </form>
-            </div>
             <div class="mobile_menu_overlay"></div>
             <div class="main_title_wrapper jl_na_bg_title">
                 <div class="container">

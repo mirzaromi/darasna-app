@@ -16,17 +16,6 @@
                 class="header-wraper jl_header_magazine_style two_header_top_style header_layout_style3_custom jl_cusdate_head">
                 <!-- Start Main menu -->
                 @include('public.partial.navbar')
-            <div class="search_form_menu_personal">
-                <div class="menu_mobile_large_close"><span
-                        class="jl_close_wapper search_form_menu_personal_click"><span
-                            class="jl_close_1"></span><span class="jl_close_2"></span></span>
-                </div>
-                <form method="get" class="searchform_theme" action="#">
-                    <input type="text" placeholder="Search..." value="" name="s" class="search_btn" />
-                    <button type="submit" class="button"><i class="fa fa-search"></i>
-                    </button>
-                </form>
-            </div>
             <div class="mobile_menu_overlay"></div>
             <div class="main_title_wrapper category_title_section jl_cat_img_bg">
                 <div class="category_image_bg_image" style="background-image: url('img/1920x982.png');"></div>

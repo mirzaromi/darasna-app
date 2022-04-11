@@ -142,8 +142,27 @@ class PostController extends Controller
 
     public function all()
     {
+        $post = Post::latest();
+        if (request('cari')) 
+        {
+            $first_post = $post->where('judul','like','%' . request('cari'). '%')
+                                ->orWhere('isi','like','%' . request('cari'). '%')
+                                ->first();
+            $posts = $post->where('judul','like','%' . request('cari'). '%')
+                                ->orWhere('isi','like','%' . request('cari'). '%')
+                                ->skip(1)->take(Post::count()-1)->get();
+        }
+        else 
+        {
+            $first_post = $post->first();
+            $posts = $post->skip(1)->take(Post::count()-1)->get();
+        }
+
+        // dd($posts);
         return view('public.post.all_post',[
             'title1' => 'post', 
+            'first_post' => $first_post,
+            'posts' => $posts,
         ]);
     }
 
