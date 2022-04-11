@@ -103,10 +103,19 @@
                                     </div>
                                     @endforeach
                                 </div>
-                            </div>
-
+                            </div>                            
+                            {{ $posts->links('vendor.pagination.default') }}
+                            {{-- @if($posts->hasPages())
                             <nav class="jellywp_pagination">
                                 <ul class="page-numbers">
+                                    @if ($posts->onFirstPage())
+                                    <li class="disabled" aria-disabled="true" aria-label="@lang('pagination.previous')"><a class="next page-numbers" href=""><i
+                                        class="fa fa-long-arrow-left"></i></a></li>
+                                    @else
+                                    <li class="disabled" aria-disabled="true" aria-label="@lang('pagination.previous')"><a class="next page-numbers" href="{{ $posts->previousPageUrl() }}"><i
+                                        class="fa fa-long-arrow-left"></i></a></li>
+                                    @endif
+                                    
                                     <li><span aria-current="page" class="page-numbers current">1</span></li>
                                     <li><a class="page-numbers" href="#">2</a></li>
                                     <li><a class="page-numbers" href="#">3</a></li>
@@ -116,6 +125,7 @@
                                                 class="fa fa-long-arrow-right"></i></a></li>
                                 </ul>
                             </nav>
+                            @endif --}}
                         </div>
                     </div>
 

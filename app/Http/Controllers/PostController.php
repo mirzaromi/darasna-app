@@ -146,16 +146,16 @@ class PostController extends Controller
         if (request('cari')) 
         {
             $first_post = $post->where('judul','like','%' . request('cari'). '%')
-                                ->orWhere('isi','like','%' . request('cari'). '%')
+                                // ->orWhere('isi','like','%' . request('cari'). '%')
                                 ->first();
             $posts = $post->where('judul','like','%' . request('cari'). '%')
-                                ->orWhere('isi','like','%' . request('cari'). '%')
+                                // ->orWhere('isi','like','%' . request('cari'). '%')
                                 ->skip(1)->take(Post::count()-1)->get();
         }
         else 
         {
             $first_post = $post->first();
-            $posts = $post->skip(1)->take(Post::count()-1)->get();
+            $posts = $post->skip(1)->take(Post::count()-1)->paginate(9);
         }
 
         // dd($posts);

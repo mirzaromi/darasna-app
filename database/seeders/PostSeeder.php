@@ -15,7 +15,7 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=1; $i<=4 ; $i++) { 
+        for ($i=1; $i<=8 ; $i++) { 
 
             Post::create([
                 'judul' => 'Tanya Jawab Seputar Akidah',
@@ -189,9 +189,9 @@ class PostSeeder extends Seeder
                 
             ]);
 
-            sleep(2);
+            // sleep(1);
         }
-        for ($i=1; $i<=4 ; $i++) { 
+        for ($i=1; $i<=100; $i++) { 
 
             Post::create([
                 'judul' => 'Puasa Untuk Anak',
@@ -223,9 +223,9 @@ class PostSeeder extends Seeder
                 
             ]);
 
-            sleep(2);
+            // sleep(1);
         }
-        for ($i=1; $i<=4 ; $i++) { 
+        for ($i=1; $i<=8 ; $i++) { 
 
             Post::create([
                 'judul' => 'Sejarah Islam',
@@ -347,9 +347,9 @@ class PostSeeder extends Seeder
                 'view' => rand(1,1000),
             ]);
 
-            sleep(2);
+            // sleep(1);
         }
-        for ($i=1; $i<=4 ; $i++) { 
+        for ($i=1; $i<=8 ; $i++) { 
 
             Post::create([
                 'judul' => 'Tokoh Matematikawan Islam',
@@ -422,7 +422,7 @@ class PostSeeder extends Seeder
                 
             ]);
 
-            sleep(2);
+            // sleep(1);
         }
         
     }
