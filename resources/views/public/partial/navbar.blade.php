@@ -21,7 +21,7 @@
                                 <!-- main menu -->
                                 <div class="menu-primary-container navigation_wrapper">
                                     <ul id="mainmenu" class="jl_main_menu">
-                                        <li class="menu-item"> <a href="/assets/disto/#">Home<span
+                                        <li class="menu-item"> <a href="/">Home<span
                                                     class="border-menu"></span></a>
                                         </li>
                                         <li class="menu-item menu-item-has-children"> <a
@@ -39,20 +39,20 @@
                                             </ul>
                                         </li>
                                         <li class="menu-item menu-item-has-children"> <a
-                                                href="/assets/disto/#">Kategori<span class="border-menu"></span></a>
+                                                href="#">Kategori<span class="border-menu"></span></a>
                                             <ul class="sub-menu">
-                                                <li class="menu-item"> <a href="/assets/disto/#">AKIDAH<span
+                                                <li class="menu-item"> <a href="/AKIDAH">AKIDAH<span
                                                             class="border-menu"></span></a>
                                                 </li>
-                                                <li class="menu-item"> <a href="/assets/disto/#">HUKUM<span
-                                                            class="border-menu"></span></a>
-                                                </li>
-                                                <li class="menu-item"><a
-                                                        href="/assets/disto/author.html">SEJARAH<span
+                                                <li class="menu-item"> <a href="/HUKUM">HUKUM<span
                                                             class="border-menu"></span></a>
                                                 </li>
                                                 <li class="menu-item"><a
-                                                        href="/assets/disto/author.html">TOKOH<span
+                                                        href="/SEJARAH">SEJARAH<span
+                                                            class="border-menu"></span></a>
+                                                </li>
+                                                <li class="menu-item"><a
+                                                        href="/TOKOH">TOKOH<span
                                                             class="border-menu"></span></a>
                                                 </li>
                                             </ul>

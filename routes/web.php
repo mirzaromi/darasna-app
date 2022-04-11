@@ -6,7 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AuthorController;
-
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +20,8 @@ use App\Http\Controllers\AuthorController;
 */
 
 Route::get('/', [HomeController::class,'index']);
+
+Route::get('/{kategori}',[CategoryController::class,'index']);
 
 Route::get('/admin', [LoginController::class,'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class,'authenticate']);
