@@ -41,18 +41,18 @@
                                         <li class="menu-item menu-item-has-children"> <a
                                                 href="#">Kategori<span class="border-menu"></span></a>
                                             <ul class="sub-menu">
-                                                <li class="menu-item"> <a href="/AKIDAH">AKIDAH<span
+                                                <li class="menu-item"> <a href="/category/AKIDAH">AKIDAH<span
                                                             class="border-menu"></span></a>
                                                 </li>
-                                                <li class="menu-item"> <a href="/HUKUM">HUKUM<span
-                                                            class="border-menu"></span></a>
-                                                </li>
-                                                <li class="menu-item"><a
-                                                        href="/SEJARAH">SEJARAH<span
+                                                <li class="menu-item"> <a href="/category/HUKUM">HUKUM<span
                                                             class="border-menu"></span></a>
                                                 </li>
                                                 <li class="menu-item"><a
-                                                        href="/TOKOH">TOKOH<span
+                                                        href="/category/SEJARAH">SEJARAH<span
+                                                            class="border-menu"></span></a>
+                                                </li>
+                                                <li class="menu-item"><a
+                                                        href="/category/TOKOH">TOKOH<span
                                                             class="border-menu"></span></a>
                                                 </li>
                                             </ul>

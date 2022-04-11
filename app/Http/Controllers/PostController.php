@@ -140,4 +140,11 @@ class PostController extends Controller
         ]);
     }
 
+    public function all()
+    {
+        return view('public.post.all_post',[
+            'title1' => 'post', 
+        ]);
+    }
+
 }

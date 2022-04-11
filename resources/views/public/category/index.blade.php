@@ -75,7 +75,7 @@
                                                             @default
                                                                 style="background:#1232b1" 
                                                         @endswitch
-                                                        href="/{{ $p->kategori }}">{{ $p->kategori }}</a></span></i></span>
+                                                        href="/category/{{ $p->kategori }}">{{ $p->kategori }}</a></span></i></span>
                                             </div>
                                             <div class="post-entry-content">
                                                 <div class="post-entry-content-wrapper">
