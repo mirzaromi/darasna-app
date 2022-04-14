@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Author;
+use App\Models\Comment;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -38,6 +39,11 @@ class DatabaseSeeder extends Seeder
         Author::create([
             'nama' => 'Muzammil',
             'slug' => 'muzammil'
+        ]);
+
+        Comment::create([
+            'isi' => 'ini comment pertama',
+            'post_id' => 1
         ]);
 
         $this->call([

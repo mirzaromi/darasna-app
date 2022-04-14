@@ -283,25 +283,22 @@
                                             <h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a
                                                         rel="nofollow" id="cancel-comment-reply-link" href="#"
                                                         style="display:none;">Cancel reply</a></small></h3>
-                                            <form action="#" method="post" id="commentform" class="comment-form">
+                                            @include('public.post.display_comment', ['comments' => $post[0]->comment, 'post_id' => $post[0]->id])
+                                            <form action="/" method="post" id="commentform" class="comment-form">
+                                                @csrf
                                                 <p class="comment-notes"><span id="email-notes">Your email address
                                                         will not be published.</span> Required fields are marked <span
                                                         class="required">*</span>
                                                 </p>
                                                 <p class="comment-form-comment">
-                                                    <textarea class="u-full-width" id="comment" name="comment" cols="45" rows="8" aria-required="true"
+                                                    <textarea class="u-full-width" id="comment" name="isi" cols="45" rows="8" aria-required="true"
                                                         placeholder="Comment"></textarea>
                                                 </p>
-                                                <div class="form-fields row"><span
+                                                {{-- <div class="form-fields row"><span
                                                         class="comment-form-author col-md-4"><input id="author"
                                                             name="author" type="text" value="" size="30"
                                                             placeholder="Fullname"></span>
-                                                    <span class="comment-form-email col-md-4"><input id="email"
-                                                            name="email" type="text" value="" size="30"
-                                                            placeholder="Email Address"></span>
-                                                    <span class="comment-form-url col-md-4"><input id="url" name="url"
-                                                            type="text" value="" size="30" placeholder="Web URL"></span>
-                                                </div>
+                                                </div> --}}
                                                 <p class="form-submit">
                                                     <input name="submit" type="submit" id="submit"
                                                         class="submit" value="Post Comment">

@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ Route::get('/post/{slug}',[PostController::class,'single_post'])->name('post');
 Route::get('/author/{slug}',[AuthorController::class,'author']);
 Route::get('/all_post', [PostController::class,'all']);
 
+Route::resource('/comment',CommentController::class);
 
 
 Route::get('/admin/home', function(){

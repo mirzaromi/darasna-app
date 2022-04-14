@@ -133,7 +133,7 @@ class PostController extends Controller
         $watch = $get_post[0]->view;
         $watch++;
         Post::where('slug', $slug)->update(['view'=>$watch]);
-                
+
         return view('public.post.single_post',[
             'title1' => 'Post',
             'post' => Post::where('slug', $slug)->get()
