@@ -30,12 +30,14 @@
                                                         class="post-category-color-text" style="background:#0015ff"
                                                         href="#">{{ $post[0]->kategori }}</a></span>
                                                 <h1 class="single_post_title_main">
-                                                    {{ $post[0]->judul }} </h1>                                                
+                                                    {{ $post[0]->judul }} </h1>
                                                 <span class="single-post-meta-wrapper"><span
-                                                        class="post-author"><span><img src="/assets/disto/img/favicon.jpg"
-                                                                width="50" height="50" alt="{{ $post[0]->author->nama }}"
+                                                        class="post-author"><span><img
+                                                                src="/assets/disto/img/favicon.jpg" width="50"
+                                                                height="50" alt="{{ $post[0]->author->nama }}"
                                                                 class="avatar avatar-50 wp-user-avatar wp-user-avatar-50 alignnone photo" /><a
-                                                                href="#" title="Posts by {{ $post[0]->author->nama }}" rel="author">{{ $post[0]->author->nama }}</a></span></span><span
+                                                                href="#" title="Posts by {{ $post[0]->author->nama }}"
+                                                                rel="author">{{ $post[0]->author->nama }}</a></span></span><span
                                                         class="post-date updated"><i class="fa fa-clock-o"></i>Dec
                                                         23, 2016</span><span class="meta-comment"><i
                                                             class="fa fa-comment"></i><a href="#">0
@@ -143,7 +145,8 @@
                                                         <div class="image-post-thumb">
                                                             <a href="#" class="link_image featured-thumbnail"
                                                                 title="People are enjoy the job that they love">
-                                                                <img width="780" height="450" src="/assets/disto/img/780x450.png"
+                                                                <img width="780" height="450"
+                                                                    src="/assets/disto/img/780x450.png"
                                                                     class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
                                                                     alt="" />
                                                                 <div class="background_over_image"></div>
@@ -159,8 +162,9 @@
                                                             <h3 class="jl-post-title"><a href="#">
                                                                     People are enjoy the job that they love</a></h3>
                                                             <span class="jl_post_meta"><span
-                                                                    class="jl_author_img_w"><img src="/assets/disto/img/favicon.jpg"
-                                                                        width="30" height="30" alt="Anna Nikova"
+                                                                    class="jl_author_img_w"><img
+                                                                        src="/assets/disto/img/favicon.jpg" width="30"
+                                                                        height="30" alt="Anna Nikova"
                                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                                         href="#" title="Posts by Anna Nikova"
                                                                         rel="author">Anna Nikova</a></span><span
@@ -179,7 +183,8 @@
                                                         <div class="image-post-thumb">
                                                             <a href="#" class="link_image featured-thumbnail"
                                                                 title="Nice photo shooting with hand classic style">
-                                                                <img width="780" height="450" src="/assets/disto/img/780x450.png"
+                                                                <img width="780" height="450"
+                                                                    src="/assets/disto/img/780x450.png"
                                                                     class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
                                                                     alt="" />
                                                                 <div class="background_over_image"></div>
@@ -192,8 +197,9 @@
                                                             <h3 class="jl-post-title"><a href="#">
                                                                     Nice photo shooting with hand classic style</a></h3>
                                                             <span class="jl_post_meta"><span
-                                                                    class="jl_author_img_w"><img src="/assets/disto/img/favicon.jpg"
-                                                                        width="30" height="30" alt="Anna Nikova"
+                                                                    class="jl_author_img_w"><img
+                                                                        src="/assets/disto/img/favicon.jpg" width="30"
+                                                                        height="30" alt="Anna Nikova"
                                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                                         href="#" title="Posts by Anna Nikova"
                                                                         rel="author">Anna Nikova</a></span><span
@@ -212,7 +218,8 @@
                                                         <div class="image-post-thumb">
                                                             <a href="#" class="link_image featured-thumbnail"
                                                                 title="It’s always fun time and smile in the summer">
-                                                                <img width="780" height="450" src="/assets/disto/img/780x450.png"
+                                                                <img width="780" height="450"
+                                                                    src="/assets/disto/img/780x450.png"
                                                                     class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
                                                                     alt="" />
                                                                 <div class="background_over_image"></div>
@@ -226,8 +233,9 @@
                                                                     It’s always fun time and smile in the summer</a>
                                                             </h3>
                                                             <span class="jl_post_meta"><span
-                                                                    class="jl_author_img_w"><img src="/assets/disto/img/favicon.jpg"
-                                                                        width="30" height="30" alt="Anna Nikova"
+                                                                    class="jl_author_img_w"><img
+                                                                        src="/assets/disto/img/favicon.jpg" width="30"
+                                                                        height="30" alt="Anna Nikova"
                                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                                         href="#" title="Posts by Anna Nikova"
                                                                         rel="author">Anna Nikova</a></span><span
@@ -246,7 +254,8 @@
                                                         <div class="image-post-thumb">
                                                             <a href="#" class="link_image featured-thumbnail"
                                                                 title="Your job will be perfect if you concentrate">
-                                                                <img width="780" height="450" src="/assets/disto/img/780x450.png"
+                                                                <img width="780" height="450"
+                                                                    src="/assets/disto/img/780x450.png"
                                                                     class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
                                                                     alt="" />
                                                                 <div class="background_over_image"></div>
@@ -259,8 +268,9 @@
                                                             <h3 class="jl-post-title"><a href="#">
                                                                     Your job will be perfect if you concentrate</a></h3>
                                                             <span class="jl_post_meta"><span
-                                                                    class="jl_author_img_w"><img src="/assets/disto/img/favicon.jpg"
-                                                                        width="30" height="30" alt="Anna Nikova"
+                                                                    class="jl_author_img_w"><img
+                                                                        src="/assets/disto/img/favicon.jpg" width="30"
+                                                                        height="30" alt="Anna Nikova"
                                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                                         href="#" title="Posts by Anna Nikova"
                                                                         rel="author">Anna Nikova</a></span><span
@@ -283,23 +293,29 @@
                                             <h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a
                                                         rel="nofollow" id="cancel-comment-reply-link" href="#"
                                                         style="display:none;">Cancel reply</a></small></h3>
-                                            @include('public.post.display_comment', ['comments' => $post[0]->comment, 'post_id' => $post[0]->id])
-                                            <form action="{{ route('comment.store') }}" method="post" id="commentform" class="comment-form">
+                                            @include('public.post.display_comment', [
+                                                'comments' => $post[0]->comment,
+                                                'post_id' => $post[0]->id,
+                                            ])
+                                            <form action="{{ route('comment.store') }}" method="post" id="commentform"
+                                                class="comment-form">
                                                 @csrf
                                                 <p class="comment-notes"><span id="email-notes">Your email address
                                                         will not be published.</span> Required fields are marked <span
                                                         class="required">*</span>
                                                 </p>
+                                                <div class="form-fields row"><span
+                                                        class="comment-form-author col-md-4"><input id="author"
+                                                            name="user" type="text" value="" size="30"
+                                                            placeholder="Fullname"></span>
+                                                </div>
+                                                <br>
                                                 <p class="comment-form-comment">
                                                     <textarea class="u-full-width" id="comment" name="isi" cols="45" rows="8" aria-required="true"
                                                         placeholder="Comment"></textarea>
                                                 </p>
                                                 <input type="hidden" name="post_id" value="{{ $post[0]->id }}">
-                                                {{-- <div class="form-fields row"><span
-                                                        class="comment-form-author col-md-4"><input id="author"
-                                                            name="author" type="text" value="" size="30"
-                                                            placeholder="Fullname"></span>
-                                                </div> --}}
+
                                                 <p class="form-submit">
                                                     <input name="submit" type="submit" id="submit"
                                                         class="submit" value="Post Comment">
@@ -431,7 +447,8 @@
                                             <h3 class="image-post-title"><a href="#">
                                                     Standing right here and singing until the mid</a></h3>
                                             <span class="jl_post_meta"><span class="jl_author_img_w"><img
-                                                        src="/assets/disto/img/favicon.jpg" width="30" height="30" alt="Anna Nikova"
+                                                        src="/assets/disto/img/favicon.jpg" width="30" height="30"
+                                                        alt="Anna Nikova"
                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                         href="#" title="Posts by Anna Nikova" rel="author">Anna
                                                         Nikova</a></span><span class="post-date"><i
@@ -448,7 +465,8 @@
                                             <h3 class="image-post-title"><a href="#">
                                                     You can make your art with canyon color</a></h3>
                                             <span class="jl_post_meta"><span class="jl_author_img_w"><img
-                                                        src="/assets/disto/img/favicon.jpg" width="30" height="30" alt="Anna Nikova"
+                                                        src="/assets/disto/img/favicon.jpg" width="30" height="30"
+                                                        alt="Anna Nikova"
                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                         href="#" title="Posts by Anna Nikova" rel="author">Anna
                                                         Nikova</a></span><span class="post-date"><i
@@ -465,7 +483,8 @@
                                             <h3 class="image-post-title"><a href="#">
                                                     Makeup it really important things to do</a></h3>
                                             <span class="jl_post_meta"><span class="jl_author_img_w"><img
-                                                        src="/assets/disto/img/favicon.jpg" width="30" height="30" alt="Anna Nikova"
+                                                        src="/assets/disto/img/favicon.jpg" width="30" height="30"
+                                                        alt="Anna Nikova"
                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                         href="#" title="Posts by Anna Nikova" rel="author">Anna
                                                         Nikova</a></span><span class="post-date"><i
@@ -482,7 +501,7 @@
             </section>
             <!-- end content -->
             <!-- Start footer -->
-    @include('public.partial.footer')
+            @include('public.partial.footer')
 </body>
 
 </html>

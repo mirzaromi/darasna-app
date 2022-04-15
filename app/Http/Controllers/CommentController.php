@@ -40,11 +40,13 @@ class CommentController extends Controller
         // dd($request);
         $validate = $request->validate([
             'isi' => 'required',
-            'post_id' => 'required'
+            'post_id' => 'required',
+            'user' => 'required'
         ]);
 
         if ($request->parent_id) {
             $validate['parent_id'] = $request->parent_id;
+            $validate['reply_user'] = $request->reply_user;
         }
         // dd($validate);
         Comment::create($validate);

@@ -43,7 +43,8 @@ class DatabaseSeeder extends Seeder
 
         Comment::create([
             'isi' => 'ini comment pertama',
-            'post_id' => 1
+            'post_id' => 1,
+            'user' => 'jidan'
         ]);
 
         $this->call([
