@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Comment;
 use App\Http\Requests\StoreCommentRequest;
 use App\Http\Requests\UpdateCommentRequest;
-use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
@@ -35,12 +35,18 @@ class CommentController extends Controller
      * @param  \App\Http\Requests\StoreCommentRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Comment $comment, Request $request)
+    public function store(Comment $comment,Request $request)
     {
+        // dd($request);
         $validate = $request->validate([
-            'isi' => 'required'
+            'isi' => 'required',
+            'post_id' => 'required'
         ]);
 
+        if ($request->parent_id) {
+            $validate['parent_id'] = $request->parent_id;
+        }
+        // dd($validate);
         Comment::create($validate);
 
         return back();

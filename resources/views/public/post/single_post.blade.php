@@ -284,7 +284,7 @@
                                                         rel="nofollow" id="cancel-comment-reply-link" href="#"
                                                         style="display:none;">Cancel reply</a></small></h3>
                                             @include('public.post.display_comment', ['comments' => $post[0]->comment, 'post_id' => $post[0]->id])
-                                            <form action="/" method="post" id="commentform" class="comment-form">
+                                            <form action="{{ route('comment.store') }}" method="post" id="commentform" class="comment-form">
                                                 @csrf
                                                 <p class="comment-notes"><span id="email-notes">Your email address
                                                         will not be published.</span> Required fields are marked <span
@@ -294,6 +294,7 @@
                                                     <textarea class="u-full-width" id="comment" name="isi" cols="45" rows="8" aria-required="true"
                                                         placeholder="Comment"></textarea>
                                                 </p>
+                                                <input type="hidden" name="post_id" value="{{ $post[0]->id }}">
                                                 {{-- <div class="form-fields row"><span
                                                         class="comment-form-author col-md-4"><input id="author"
                                                             name="author" type="text" value="" size="30"

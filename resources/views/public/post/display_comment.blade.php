@@ -3,7 +3,7 @@
         <strong>Nama Orang</strong>
         <p>{{ $comment->isi }}</p>
         <a href="" id="reply"></a>
-        <form method="post" action="/comment">
+        <form method="post" action="{{ route('comment.store') }}">
             @csrf
             <div class="form-group">
                 <input type="text" name="isi" class="form-control" />
