@@ -15,6 +15,6 @@
             </div>
             <hr />
         </form>
-        @include('public.post.display_comment', ['comments' => $comment->reply])
     </div>
-@endforeach
+    @endforeach
+    @include('public.post.display_comment', ['comments' => $comment->reply])
