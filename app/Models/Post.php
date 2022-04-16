@@ -33,4 +33,10 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class)->whereNull('parent_id');
     }
+
+    public function get_like($id)
+    {
+        $like = Post::where('id', $id)->first();
+        return $like->like;
+    }
 }

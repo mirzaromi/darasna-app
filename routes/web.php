@@ -33,6 +33,9 @@ Route::get('/post/{slug}',[PostController::class,'single_post'])->name('post');
 Route::get('/author/{slug}',[AuthorController::class,'author']);
 Route::get('/all_post', [PostController::class,'all']);
 
+
+
+
 Route::resource('/comment',CommentController::class);
 
 
@@ -43,6 +46,7 @@ Route::get('/admin/home', function(){
     ]);
 })->middleware('auth');
 
+Route::get('/admin/post/like',[PostController::class,'like'])->name('like')->middleware('guest');
 Route::get('/admin/post/check_slug', [PostController::class, 'check_slug'])->middleware('auth');
 Route::resource('/admin/post',PostController::class)->middleware('auth');
 

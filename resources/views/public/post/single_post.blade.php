@@ -67,6 +67,14 @@
                                                     <li><a href="#" rel="tag">Relaxing</a></li>
                                                 </ul>
                                             </div>
+                                            <div>
+                                                                                                    
+                                                    <button id="like">like</button>
+                                                    <input type="hidden" id="post_id" name="post_id" value="{{ $post[0]->id }}">
+                                                
+                                                <span id="like_count"> : ?</span>
+                                                
+                                            </div>
 
                                             <div class="single_post_share_icons">
                                                 Share<i class="fa fa-share-alt"></i></div>
@@ -287,6 +295,10 @@
                                             </div>
 
                                         </div>
+
+                                        <!-- Like -->
+
+
                                         <!-- comment -->
 
                                         <div id="respond" class="comment-respond">
@@ -502,6 +514,23 @@
             <!-- end content -->
             <!-- Start footer -->
             @include('public.partial.footer')
+            @include('public.partial.script')
+            <script>
+                const btn = document.querySelector('#like');
+                const post_id = document.querySelector('#post_id');
+                const like_count = document.querySelector('#like_count');
+
+                // console.log(post_id.value);
+
+                btn.addEventListener('click', function() {
+                    fetch('/admin/post/like?post_id=' + post_id.value)
+                        .then(response => response.json())
+                        .then(data => like_count.innerHTML = data.like_count)
+
+                    console.log(this.textContent);
+                    this.textContent = 'Unlike';
+                });
+            </script>
 </body>
 
 </html>

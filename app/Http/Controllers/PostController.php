@@ -121,12 +121,6 @@ class PostController extends Controller
         return redirect('/admin/post')->with('sukses', 'sukses menghapus postingan!');
     }
 
-    public function check_slug(Request $request)
-    {
-        $slug = SlugService::createSlug(Post::class, 'slug', $request->judul);
-        return response()->json(['slug' => $slug]);
-    }
-
     public function single_post($slug, Post $post)
     {
         $get_post = Post::where('slug',$slug)->get();
@@ -164,6 +158,23 @@ class PostController extends Controller
             'first_post' => $first_post,
             'posts' => $posts,
         ]);
+    }
+
+    public function check_slug(Request $request)
+    {
+        // dd('sukses');
+        $slug = SlugService::createSlug(Post::class, 'slug', $request->judul);
+        return response()->json(['slug' => $slug]);
+    }
+
+    public function like(Post $post, Request $request)
+    {
+        
+        $like = $post->get_like($request->post_id);
+        $like++;
+        Post::where('id', $request->post_id)->update(['like' => $like]);
+        $like_count = $like;
+        return response()->json(['like_count' => $like_count]);
     }
 
 }
