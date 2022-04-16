@@ -171,7 +171,12 @@ class PostController extends Controller
     {
         
         $like = $post->get_like($request->post_id);
-        $like++;
+        // $like = $post->get_like($request->post_id);
+        if ($request->like === "Like") {
+            $like++;
+        } else {
+            $like--;
+        }
         Post::where('id', $request->post_id)->update(['like' => $like]);
         $like_count = $like;
         return response()->json(['like_count' => $like_count]);

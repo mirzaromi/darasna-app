@@ -68,12 +68,13 @@
                                                 </ul>
                                             </div>
                                             <div>
-                                                                                                    
-                                                    <button id="like">like</button>
-                                                    <input type="hidden" id="post_id" name="post_id" value="{{ $post[0]->id }}">
-                                                
-                                                <span id="like_count"> : ?</span>
-                                                
+
+                                                <button id="like">like</button>
+                                                <input type="hidden" id="post_id" name="post_id"
+                                                    value="{{ $post[0]->id }}">
+
+                                                <span id="like_count"> {{ $post[0]->like }}</span>
+
                                             </div>
 
                                             <div class="single_post_share_icons">
@@ -309,8 +310,8 @@
                                                 'comments' => $post[0]->comment,
                                                 'post_id' => $post[0]->id,
                                             ])
-                                            <form action="{{ route('comment.store') }}" method="post" id="commentform"
-                                                class="comment-form">
+                                            <form action="{{ route('comment.store') }}" method="post"
+                                                id="commentform" class="comment-form">
                                                 @csrf
                                                 <p class="comment-notes"><span id="email-notes">Your email address
                                                         will not be published.</span> Required fields are marked <span
@@ -519,16 +520,22 @@
                 const btn = document.querySelector('#like');
                 const post_id = document.querySelector('#post_id');
                 const like_count = document.querySelector('#like_count');
-
-                // console.log(post_id.value);
+                const count = parseInt(like_count.textContent);
 
                 btn.addEventListener('click', function() {
-                    fetch('/admin/post/like?post_id=' + post_id.value)
+                    if (this.textContent == 'Like') {
+                        this.textContent = 'Unlike';
+                    } else {
+                        this.textContent = 'Like';
+                    }
+                    console.log(this.textContent);
+                    fetch('/admin/post/like?post_id=' + post_id.value + '&like=' + this.textContent)
                         .then(response => response.json())
-                        .then(data => like_count.innerHTML = data.like_count)
+                        .then(data => like_count.innerHTML = data.like_count);
+                    
 
                     console.log(this.textContent);
-                    this.textContent = 'Unlike';
+
                 });
             </script>
 </body>
