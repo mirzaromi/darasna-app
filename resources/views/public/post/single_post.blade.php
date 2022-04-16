@@ -68,13 +68,14 @@
                                                 </ul>
                                             </div>
                                             <div>
+                                                <div>
+                                                    <button id="like" class="btn-like">Like</button>
+                                                    <i class="fa fa-heart-o" style="margin-left: 15px"></i>
+                                                    <span id="like_count" > {{ $post[0]->like }}</span>
 
-                                                <button id="like">like</button>
+                                                </div>
                                                 <input type="hidden" id="post_id" name="post_id"
                                                     value="{{ $post[0]->id }}">
-
-                                                <span id="like_count"> {{ $post[0]->like }}</span>
-
                                             </div>
 
                                             <div class="single_post_share_icons">
@@ -523,18 +524,18 @@
                 const count = parseInt(like_count.textContent);
 
                 btn.addEventListener('click', function() {
-                    if (this.textContent == 'Like') {
-                        this.textContent = 'Unlike';
-                    } else {
-                        this.textContent = 'Like';
-                    }
-                    console.log(this.textContent);
+
+                    // console.log(this.textContent);
                     fetch('/admin/post/like?post_id=' + post_id.value + '&like=' + this.textContent)
                         .then(response => response.json())
                         .then(data => like_count.innerHTML = data.like_count);
-                    
-
-                    console.log(this.textContent);
+                    if (this.textContent == 'Like') {
+                        this.textContent = 'liked';
+                    } else {
+                        this.textContent = 'Like';
+                    }
+                    this.classList.toggle("liked");
+                    // console.log(this.textContent);
 
                 });
             </script>

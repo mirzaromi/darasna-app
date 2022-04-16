@@ -21,3 +21,21 @@
     height: 100px;
     object-fit: cover;
 }
+
+/* button like */
+.btn-like {
+    width: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    border: 1px solid #8d8d8d;
+    border-radius: 5px;
+    color: black;
+    margin: 0 0 0 20px ;
+}
+
+.liked {
+    background-color: #60cf73 !important;
+    color: white !important;
+    border: none;
+
+}

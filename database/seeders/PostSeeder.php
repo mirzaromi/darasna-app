@@ -186,6 +186,7 @@ class PostSeeder extends Seeder
                 'slug' => 'tanya-jawab-seputar-akidah-'. $i,
                 'foto' =>'/assets/image/tanya jawab akidah.png',
                 'view' => rand(1,1000),
+                'like' => rand(1,1000),
                 
             ]);
 
@@ -220,6 +221,7 @@ class PostSeeder extends Seeder
                 'slug' => 'puasa-untuk-anak-'. $i,
                 'foto' =>'/assets/image/hukum puasa untuk anak.png',
                 'view' => rand(1,1000),
+                'like' => rand(1,1000),
                 
             ]);
 
@@ -345,6 +347,7 @@ class PostSeeder extends Seeder
                 'slug' => 'sejarah-islam-'. $i,
                 'foto' =>'/assets/image/sejarah.png',
                 'view' => rand(1,1000),
+                'like' => rand(1,1000),
             ]);
 
             // sleep(1);
@@ -419,6 +422,7 @@ class PostSeeder extends Seeder
                 'slug' => 'tokoh-maetmatikawan-islam-'. $i,
                 'foto' =>'/assets/image/tokoh matematika islam.png',
                 'view' => rand(1,1000),
+                'like' => rand(1,1000),
                 
             ]);
 
