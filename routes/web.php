@@ -48,8 +48,8 @@ Route::get('/admin/home', function(){
 
 Route::get('/admin/post/like',[PostController::class,'like'])->name('like')->middleware('guest');
 Route::get('/admin/post/check_slug', [PostController::class, 'check_slug'])->middleware('auth');
-Route::resource('/admin/post',PostController::class)->middleware('auth');
+Route::resource('/admin/post',PostController::class)->middleware('author');
 
-Route::resource('/admin/user', UserController::class)->middleware('auth');
+Route::resource('/admin/user', UserController::class)->middleware('admin');
 
 Route::resource('/author', AuthorController::class);

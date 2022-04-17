@@ -19,27 +19,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        User::create([
-            'username' => 'admin',
-            'password' => bcrypt('admin'),
-        ]);
 
-        Author::create([
-            'nama' => 'Muhammad Haikal',
-            'slug' => 'muhammad-haikal'
-        ]);
-        Author::create([
-            'nama' => 'Abdurrohman',
-            'slug' => 'abdurrohman'
-        ]);
-        Author::create([
-            'nama' => 'Amar Mar\'uf',
-            'slug' => 'Amar-ma\'ruf'
-        ]);
-        Author::create([
-            'nama' => 'Muzammil',
-            'slug' => 'muzammil'
-        ]);
 
         Comment::create([
             'isi' => 'ini comment pertama',
@@ -49,6 +29,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             PostSeeder::class,
+            UserSeeder::class,
+            AuthorSeeder::class,
         ]);
     }
 }
