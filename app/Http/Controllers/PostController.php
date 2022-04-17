@@ -127,10 +127,14 @@ class PostController extends Controller
         $watch = $get_post[0]->view;
         $watch++;
         Post::where('slug', $slug)->update(['view'=>$watch]);
+        $kategori = Post::select('kategori')->distinct()->get();
+        $posts = Post::latest()->take(4)->get();
 
         return view('public.post.single_post',[
             'title1' => 'Post',
-            'post' => Post::where('slug', $slug)->get()
+            'post' => Post::where('slug', $slug)->get(),
+            'kategori' => $kategori,
+            'posts' => $posts,
         ]);
     }
 

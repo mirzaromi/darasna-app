@@ -1,7 +1,9 @@
 @foreach($comments as $comment)
     <div class="display-comment" @if($comment->parent_id != null) style="margin-left:40px;" @endif>
         <strong>{{ $comment->user }}</strong>
-        <span>membalas </span>
+        @if ($comment->parent_id != null)
+            <span>membalas </span>
+        @endif
         <strong>{{ $comment->reply_user }}</strong>
         <p>{{ $comment->isi }}</p>
         <a href="" id="reply"></a>

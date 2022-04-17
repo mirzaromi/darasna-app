@@ -72,12 +72,10 @@
                                                     <button id="like" class="btn-like">Like</button>
                                                     <i class="fa fa-heart-o" style="margin-left: 15px"></i>
                                                     <span id="like_count" > {{ $post[0]->like }}</span>
-
                                                 </div>
                                                 <input type="hidden" id="post_id" name="post_id"
                                                     value="{{ $post[0]->id }}">
                                             </div>
-
                                             <div class="single_post_share_icons">
                                                 Share<i class="fa fa-share-alt"></i></div>
                                         </div>
@@ -349,30 +347,16 @@
                             <div id="disto_category_image_widget_register-5" class="widget jellywp_cat_image">
                                 <div class="wrapper_category_image">
                                     <div class="category_image_wrapper_main">
+                                        @foreach ($kategori as $k)
                                         <div class="category_image_bg_image"
                                             style="background-image: url('img/400x280.png');"><a
-                                                class="category_image_link" id="category_color_2" href="#"><span
+                                                class="category_image_link" id="category_color_2" href="/category/{{ $k->kategori }}"><span
                                                     class="jl_cm_overlay"><span
-                                                        class="jl_cm_name">Active</span><span
-                                                        class="jl_cm_count">11</span></span></a>
+                                                        class="jl_cm_name">{{ $k->kategori }}</span><span
+                                                        class="jl_cm_count">{{ App\Models\Post::where('kategori',$k->kategori)->count() }}</span></span></a>
                                             <div class="category_image_bg_overlay" style="background: #ed1c1c;"></div>
                                         </div>
-                                        <div class="category_image_bg_image"
-                                            style="background-image: url('img/400x280.png');"><a
-                                                class="category_image_link" id="category_color_3" href="#"><span
-                                                    class="jl_cm_overlay"><span
-                                                        class="jl_cm_name">Business</span><span
-                                                        class="jl_cm_count">10</span></span></a>
-                                            <div class="category_image_bg_overlay" style="background: #0015ff;"></div>
-                                        </div>
-                                        <div class="category_image_bg_image"
-                                            style="background-image: url('img/400x280.png');"><a
-                                                class="category_image_link" id="category_color_4" href="#"><span
-                                                    class="jl_cm_overlay"><span
-                                                        class="jl_cm_name">Crazy</span><span
-                                                        class="jl_cm_count">5</span></span></a>
-                                            <div class="category_image_bg_overlay" style="background: #d1783c;"></div>
-                                        </div>
+                                        @endforeach
                                     </div> <span class="jl_none_space"></span>
                                 </div>
                             </div><span class="jl_none_space"></span>
@@ -383,11 +367,12 @@
                                     </div>
                                     <div>
                                         <ul class="feature-post-list recent-post-widget">
+                                            @foreach ($posts as $p)
                                             <li>
-                                                <a href="#"
+                                                <a href="/post/{{ $p->slug }}"
                                                     class="jl_small_format feature-image-link image_post featured-thumbnail"
-                                                    title="Sitting right here waiting for you come to me">
-                                                    <img width="120" height="120" src="/assets/disto/img/120x120.png"
+                                                    title="{{ $p->judul }}">
+                                                    <img width="120" height="120" src="{{ $p->foto }}"
                                                         class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
                                                         alt="" />
                                                     <div class="background_over_image"></div>
@@ -395,55 +380,14 @@
                                                 <div class="item-details">
                                                     <span class="meta-category-small"><a
                                                             class="post-category-color-text" style="background:#d800f9"
-                                                            href="#">Techno</a></span>
-                                                    <h3 class="feature-post-title"><a href="#">
-                                                            Sitting right here waiting for you come to me</a></h3>
+                                                            href="/category/{{ $p->kategori }}">Techno</a></span>
+                                                    <h3 class="feature-post-title"><a href="/post/{{ $p->slug }}">
+                                                            {{ $p->judul }}</a></h3>
                                                     <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                                            class="post-date"><i class="fa fa-clock-o"></i>Dec
-                                                            24, 2016</span></span>
+                                                            class="post-date"><i class="fa fa-clock-o"></i>{{\Carbon\Carbon::parse($p->created_at)->isoFormat('D MMM Y')}}</span></span>
                                                 </div>
                                             </li>
-                                            <li>
-                                                <a href="#"
-                                                    class="jl_small_format feature-image-link image_post featured-thumbnail"
-                                                    title="Before breakfast we have a great photo shoot">
-                                                    <img width="120" height="120" src="/assets/disto/img/120x120.png"
-                                                        class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                                        alt="" />
-                                                    <div class="background_over_image"></div>
-                                                </a>
-                                                <div class="item-details">
-                                                    <span class="meta-category-small"><a
-                                                            class="post-category-color-text" style="background:#ed1c1c"
-                                                            href="#">Active</a></span>
-                                                    <h3 class="feature-post-title"><a href="#">
-                                                            Before breakfast we have a great photo shoot</a></h3>
-                                                    <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                                            class="post-date"><i class="fa fa-clock-o"></i>Dec
-                                                            23, 2016</span></span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="#"
-                                                    class="jl_small_format feature-image-link image_post featured-thumbnail"
-                                                    title="Beautiful flying bikes with simple style but look good">
-                                                    <img width="120" height="120" src="/assets/disto/img/120x120.png"
-                                                        class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                                        alt="" />
-                                                    <div class="background_over_image"></div>
-                                                </a>
-                                                <div class="item-details">
-                                                    <span class="meta-category-small"><a
-                                                            class="post-category-color-text" style="background:#ed1c1c"
-                                                            href="#">Active</a></span>
-                                                    <h3 class="feature-post-title"><a href="#">
-                                                            Beautiful flying bikes with simple style but look good</a>
-                                                    </h3>
-                                                    <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                                            class="post-date"><i class="fa fa-clock-o"></i>Dec
-                                                            23, 2016</span></span>
-                                                </div>
-                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                     <span class="jl_none_space"></span>
