@@ -311,7 +311,7 @@
             </div>
             <!-- end content -->
             <!-- Start footer -->
-            @include('public.partial.footer')
+            @include('public.partial.footer', ['kategori' => $kategori = App\Models\Post::select('kategori')->distinct()->get()])
             <!-- End footer -->
         </div>
     </div>

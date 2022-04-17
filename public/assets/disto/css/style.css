@@ -9511,13 +9511,13 @@ footer .social-icons-list-widget.iconss_widget_display li a {
     background: #1ab7ea;
 }
 .social-icons-list-widget.icons_about_widget_display li a.youtube {
-    background: #fe2905;
+    background: #de1313;
 }
 .social-icons-list-widget.icons_about_widget_display li a.tumblr {
     background: #34465d;
 }
 .social-icons-list-widget.icons_about_widget_display li a.instagram {
-    background: #3f729b;
+    background-image: linear-gradient(27deg, #fffe96, #e31717, #d900f0);
 }
 .social-icons-list-widget.icons_about_widget_display li a.linkedin {
     background: #0077B5;

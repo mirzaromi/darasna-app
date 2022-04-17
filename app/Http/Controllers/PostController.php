@@ -161,7 +161,7 @@ class PostController extends Controller
             $first_post = $post->first();
             $posts = $post->skip(1)->take(Post::count()-1)->paginate(9);
         }
-
+        
         // dd($posts);
         return view('public.post.all_post',[
             'title1' => 'post', 

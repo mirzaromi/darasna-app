@@ -72,10 +72,10 @@
                                     </div>
                                     <div class="menu_mobile_share_wrapper">
                                         <ul class="social_icon_header_top">
-                                            <li><a class="instagram" href="/assets/disto/#" target="_blank"><i
+                                            <li><a class="instagram" href="https://www.instagram.com/darasna.network/" target="_blank"><i
                                                         class="fa fa-instagram"></i></a>
                                             </li>
-                                            <li><a class="youtube" href="/assets/disto/#" target="_blank"><i
+                                            <li><a class="youtube" href="https://www.youtube.com/channel/UCGcEdI1XD9xZiH5owTdx2eQ" target="_blank"><i
                                                         class="fa fa-youtube"></i></a>
                                             </li>
                                         </ul>
@@ -139,10 +139,10 @@
                             <div class="jellywp_about_us_widget_wrapper">
                                 <div class="social_icons_widget">
                                     <ul class="social-icons-list-widget icons_about_widget_display">
-                                        <li><a class="instagram" href="/assets/disto/#" target="_blank"
-                                                style="background-color: #b00b68"><i class="fa fa-instagram"></i></a>
+                                        <li><a class="instagram" href="https://www.instagram.com/darasna.network/" target="_blank"
+                                                ><i class="fa fa-instagram"></i></a>
                                         </li>
-                                        <li><a class="youtube" href="/assets/disto/#" target="_blank"><i
+                                        <li><a class="youtube" href="https://www.youtube.com/channel/UCGcEdI1XD9xZiH5owTdx2eQ" target="_blank"><i
                                                     class="fa fa-youtube"></i></a>
                                         </li>
                                     </ul>

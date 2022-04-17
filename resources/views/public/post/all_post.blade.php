@@ -14,6 +14,7 @@
             <!-- Start header -->
             @include('public.partial.navbar')
             <div class="mobile_menu_overlay"></div>
+            @if ($first_post != null)
             <div class="jl_post_loop_wrapper jl_grid_4col_home">
                 <div class="container" id="wrapper_masonry">
                     <div class="row">
@@ -131,9 +132,24 @@
 
                 </div>
             </div>
+            @else
+            <div class="jl_post_loop_wrapper jl_grid_4col_home">
+                <div class="container" id="wrapper_masonry">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="jl_wrapper_cat">
+                                <div class="not-found-wrapper">
+                                    <h1 class="not-found">tidak ditemukan post</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endif
             <!-- end content -->
             <!-- Start footer -->
-            @include('public.partial.footer')
+            @include('public.partial.footer', ['kategori' => $kategori = App\Models\Post::select('kategori')->distinct()->get()])
             <!-- End footer -->
         </div>
     </div>

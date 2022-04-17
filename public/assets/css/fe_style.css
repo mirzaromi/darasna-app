@@ -39,3 +39,15 @@
     border: none;
 
 }
+
+/* not found post */
+.not-found-wrapper {
+    height: 41.2vh;
+}
+
+.not-found{
+    text-align: center;
+    padding: 50px 0px;
+}
+
+

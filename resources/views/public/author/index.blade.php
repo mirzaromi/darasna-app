@@ -314,7 +314,7 @@
             </div>
             <!-- end content -->
             <!-- Start footer -->
-            @include('public.partial.footer')
+            @include('public.partial.footer', ['kategori' => $kategori = App\Models\Post::select('kategori')->distinct()->get()])
         </div>
     </div>
     <div id="go-top"><a href="/assets/disto/#go-top"><i class="fa fa-angle-up"></i></a>
