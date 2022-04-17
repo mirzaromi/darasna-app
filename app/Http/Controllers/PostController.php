@@ -129,12 +129,18 @@ class PostController extends Controller
         Post::where('slug', $slug)->update(['view'=>$watch]);
         $kategori = Post::select('kategori')->distinct()->get();
         $posts = Post::latest()->take(4)->get();
+        $favs = Post::orderBy('like')->take(4)->get();
+        $left = Post::where('id', $get_post[0]->id-1)->first();
+        $right = Post::where('id', $get_post[0]->id+1)->first();
 
         return view('public.post.single_post',[
             'title1' => 'Post',
             'post' => Post::where('slug', $slug)->get(),
             'kategori' => $kategori,
             'posts' => $posts,
+            'favs' => $favs,
+            'left' => $left,
+            'right' => $right,
         ]);
     }
 

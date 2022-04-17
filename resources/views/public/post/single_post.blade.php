@@ -71,7 +71,7 @@
                                                 <div>
                                                     <button id="like" class="btn-like">Like</button>
                                                     <i class="fa fa-heart-o" style="margin-left: 15px"></i>
-                                                    <span id="like_count" > {{ $post[0]->like }}</span>
+                                                    <span id="like_count"> {{ $post[0]->like }}</span>
                                                 </div>
                                                 <input type="hidden" id="post_id" name="post_id"
                                                     value="{{ $post[0]->id }}">
@@ -97,26 +97,25 @@
                                         </div>
 
 
-
-                                        <div class="postnav_left">
-                                            <div class="single_post_arrow_content">
-                                                <a href="#" id="prepost">
-                                                    Your job will be perfect if you concentrate <span
-                                                        class="jl_post_nav_left">
-                                                        Previous post</span></a>
+                                        @if ($left != null)
+                                            <div class="postnav_left">
+                                                <div class="single_post_arrow_content">
+                                                    <a href="/post/{{ $left->slug }}" id="prepost">
+                                                        {{ $left->judul }} <span class="jl_post_nav_left">
+                                                            Previous post</span></a>
+                                                </div>
                                             </div>
-                                        </div>
+                                        @endif
 
-
-                                        <div class="postnav_right">
-                                            <div class="single_post_arrow_content">
-                                                <a href="#" id="nextpost">
-                                                    The most popular photoshop styles of the year <span
-                                                        class="jl_post_nav_left">
-                                                        Next post</span></a>
+                                        @if ($right->id < App\Models\Post::count())
+                                            <div class="postnav_right">
+                                                <div class="single_post_arrow_content">
+                                                    <a href="/post/{{ $right->slug }}" id="nextpost">
+                                                        {{ $right->judul }}<span class="jl_post_nav_left">
+                                                            Next post</span></a>
+                                                </div>
                                             </div>
-                                        </div>
-
+                                        @endif
 
                                         <div class="auth">
                                             <div class="author-info">
@@ -147,149 +146,44 @@
 
                                             <div class="single_related_post">
 
+                                                @foreach ($posts as $pst)
+                                                    <div class="jl_related_feature_items">
+                                                        <div class="jl_related_feature_items_in">
+                                                            <div class="image-post-thumb">
+                                                                <a href="/post/{{ $pst->slug }}"
+                                                                    class="link_image featured-thumbnail"
+                                                                    title="{{ $pst->title }}">
+                                                                    <img width="780" height="450"
+                                                                        src="{{ $pst->foto }}"
+                                                                        class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
+                                                                        alt="" />
+                                                                    <div class="background_over_image"></div>
+                                                                </a>
+                                                            </div>
+                                                            <span class="meta-category-small"><a
+                                                                    class="post-category-color-text"
+                                                                    style="background:#0015ff"
+                                                                    href="/category/{{ $pst->kategori }}">{{ $pst->kategori }}</a></span>
+                                                            <div class="post-entry-content">
+                                                                <h3 class="jl-post-title"><a
+                                                                        href="/author/{{ $pst->author->slug }}">
+                                                                        {{ $pst->title }}</a></h3>
+                                                                <span class="jl_post_meta"><span
+                                                                        class="jl_author_img_w"><img
+                                                                            src="/assets/disto/img/favicon.jpg"
+                                                                            width="30" height="30"
+                                                                            alt="{{ $pst->author->slug }}"
+                                                                            class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
+                                                                            href="#"
+                                                                            title="Posts by {{ $pst->author->slug }}"
+                                                                            rel="author">{{ $pst->author->slug }}</a></span><span
+                                                                        class="post-date"><i
+                                                                            class="fa fa-clock-o">{{ \Carbon\Carbon::parse($pst->created_at)->isoFormat('D MMM Y') }}</i></span></span>
+                                                            </div>
 
-                                                <div class="jl_related_feature_items">
-                                                    <div class="jl_related_feature_items_in">
-                                                        <div class="image-post-thumb">
-                                                            <a href="#" class="link_image featured-thumbnail"
-                                                                title="People are enjoy the job that they love">
-                                                                <img width="780" height="450"
-                                                                    src="/assets/disto/img/780x450.png"
-                                                                    class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
-                                                                    alt="" />
-                                                                <div class="background_over_image"></div>
-                                                            </a>
                                                         </div>
-                                                        <span class="meta-category-small"><a
-                                                                class="post-category-color-text"
-                                                                style="background:#0015ff"
-                                                                href="#">Business</a></span><span
-                                                            class="jl_post_type_icon"><i
-                                                                class="la la-camera"></i></span>
-                                                        <div class="post-entry-content">
-                                                            <h3 class="jl-post-title"><a href="#">
-                                                                    People are enjoy the job that they love</a></h3>
-                                                            <span class="jl_post_meta"><span
-                                                                    class="jl_author_img_w"><img
-                                                                        src="/assets/disto/img/favicon.jpg" width="30"
-                                                                        height="30" alt="Anna Nikova"
-                                                                        class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                        href="#" title="Posts by Anna Nikova"
-                                                                        rel="author">Anna Nikova</a></span><span
-                                                                    class="post-date"><i
-                                                                        class="fa fa-clock-o"></i>Dec 24,
-                                                                    2016</span></span>
-                                                        </div>
-
                                                     </div>
-                                                </div>
-
-
-
-                                                <div class="jl_related_feature_items">
-                                                    <div class="jl_related_feature_items_in">
-                                                        <div class="image-post-thumb">
-                                                            <a href="#" class="link_image featured-thumbnail"
-                                                                title="Nice photo shooting with hand classic style">
-                                                                <img width="780" height="450"
-                                                                    src="/assets/disto/img/780x450.png"
-                                                                    class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
-                                                                    alt="" />
-                                                                <div class="background_over_image"></div>
-                                                            </a>
-                                                        </div>
-                                                        <span class="meta-category-small"><a
-                                                                class="post-category-color-text"
-                                                                style="background:#0015ff" href="#">Business</a></span>
-                                                        <div class="post-entry-content">
-                                                            <h3 class="jl-post-title"><a href="#">
-                                                                    Nice photo shooting with hand classic style</a></h3>
-                                                            <span class="jl_post_meta"><span
-                                                                    class="jl_author_img_w"><img
-                                                                        src="/assets/disto/img/favicon.jpg" width="30"
-                                                                        height="30" alt="Anna Nikova"
-                                                                        class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                        href="#" title="Posts by Anna Nikova"
-                                                                        rel="author">Anna Nikova</a></span><span
-                                                                    class="post-date"><i
-                                                                        class="fa fa-clock-o"></i>Dec 24,
-                                                                    2016</span></span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="clear_2col_related"></div>
-                                                <div class="jl_related_feature_items">
-                                                    <div class="jl_related_feature_items_in">
-                                                        <div class="image-post-thumb">
-                                                            <a href="#" class="link_image featured-thumbnail"
-                                                                title="It’s always fun time and smile in the summer">
-                                                                <img width="780" height="450"
-                                                                    src="/assets/disto/img/780x450.png"
-                                                                    class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
-                                                                    alt="" />
-                                                                <div class="background_over_image"></div>
-                                                            </a>
-                                                        </div>
-                                                        <span class="meta-category-small"><a
-                                                                class="post-category-color-text"
-                                                                style="background:#0015ff" href="#">Business</a></span>
-                                                        <div class="post-entry-content">
-                                                            <h3 class="jl-post-title"><a href="#">
-                                                                    It’s always fun time and smile in the summer</a>
-                                                            </h3>
-                                                            <span class="jl_post_meta"><span
-                                                                    class="jl_author_img_w"><img
-                                                                        src="/assets/disto/img/favicon.jpg" width="30"
-                                                                        height="30" alt="Anna Nikova"
-                                                                        class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                        href="#" title="Posts by Anna Nikova"
-                                                                        rel="author">Anna Nikova</a></span><span
-                                                                    class="post-date"><i
-                                                                        class="fa fa-clock-o"></i>Dec 24,
-                                                                    2016</span></span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="clear_3col_related"></div>
-                                                <div class="jl_related_feature_items">
-                                                    <div class="jl_related_feature_items_in">
-                                                        <div class="image-post-thumb">
-                                                            <a href="#" class="link_image featured-thumbnail"
-                                                                title="Your job will be perfect if you concentrate">
-                                                                <img width="780" height="450"
-                                                                    src="/assets/disto/img/780x450.png"
-                                                                    class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
-                                                                    alt="" />
-                                                                <div class="background_over_image"></div>
-                                                            </a>
-                                                        </div>
-                                                        <span class="meta-category-small"><a
-                                                                class="post-category-color-text"
-                                                                style="background:#0015ff" href="#">Business</a></span>
-                                                        <div class="post-entry-content">
-                                                            <h3 class="jl-post-title"><a href="#">
-                                                                    Your job will be perfect if you concentrate</a></h3>
-                                                            <span class="jl_post_meta"><span
-                                                                    class="jl_author_img_w"><img
-                                                                        src="/assets/disto/img/favicon.jpg" width="30"
-                                                                        height="30" alt="Anna Nikova"
-                                                                        class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                        href="#" title="Posts by Anna Nikova"
-                                                                        rel="author">Anna Nikova</a></span><span
-                                                                    class="post-date"><i
-                                                                        class="fa fa-clock-o"></i>Dec 23,
-                                                                    2016</span></span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
+                                                @endforeach
 
                                                 <div class="clear_2col_related"></div>
                                             </div>
@@ -348,14 +242,16 @@
                                 <div class="wrapper_category_image">
                                     <div class="category_image_wrapper_main">
                                         @foreach ($kategori as $k)
-                                        <div class="category_image_bg_image"
-                                            style="background-image: url('img/400x280.png');"><a
-                                                class="category_image_link" id="category_color_2" href="/category/{{ $k->kategori }}"><span
-                                                    class="jl_cm_overlay"><span
-                                                        class="jl_cm_name">{{ $k->kategori }}</span><span
-                                                        class="jl_cm_count">{{ App\Models\Post::where('kategori',$k->kategori)->count() }}</span></span></a>
-                                            <div class="category_image_bg_overlay" style="background: #ed1c1c;"></div>
-                                        </div>
+                                            <div class="category_image_bg_image"
+                                                style="background-image: url('img/400x280.png');"><a
+                                                    class="category_image_link" id="category_color_2"
+                                                    href="/category/{{ $k->kategori }}"><span
+                                                        class="jl_cm_overlay"><span
+                                                            class="jl_cm_name">{{ $k->kategori }}</span><span
+                                                            class="jl_cm_count">{{ App\Models\Post::where('kategori', $k->kategori)->count() }}</span></span></a>
+                                                <div class="category_image_bg_overlay" style="background: #ed1c1c;">
+                                                </div>
+                                            </div>
                                         @endforeach
                                     </div> <span class="jl_none_space"></span>
                                 </div>
@@ -368,25 +264,28 @@
                                     <div>
                                         <ul class="feature-post-list recent-post-widget">
                                             @foreach ($posts as $p)
-                                            <li>
-                                                <a href="/post/{{ $p->slug }}"
-                                                    class="jl_small_format feature-image-link image_post featured-thumbnail"
-                                                    title="{{ $p->judul }}">
-                                                    <img width="120" height="120" src="{{ $p->foto }}"
-                                                        class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                                        alt="" />
-                                                    <div class="background_over_image"></div>
-                                                </a>
-                                                <div class="item-details">
-                                                    <span class="meta-category-small"><a
-                                                            class="post-category-color-text" style="background:#d800f9"
-                                                            href="/category/{{ $p->kategori }}">Techno</a></span>
-                                                    <h3 class="feature-post-title"><a href="/post/{{ $p->slug }}">
-                                                            {{ $p->judul }}</a></h3>
-                                                    <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                                            class="post-date"><i class="fa fa-clock-o"></i>{{\Carbon\Carbon::parse($p->created_at)->isoFormat('D MMM Y')}}</span></span>
-                                                </div>
-                                            </li>
+                                                <li>
+                                                    <a href="/post/{{ $p->slug }}"
+                                                        class="jl_small_format feature-image-link image_post featured-thumbnail"
+                                                        title="{{ $p->judul }}">
+                                                        <img width="120" height="120" src="{{ $p->foto }}"
+                                                            class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
+                                                            alt="" />
+                                                        <div class="background_over_image"></div>
+                                                    </a>
+                                                    <div class="item-details">
+                                                        <span class="meta-category-small"><a
+                                                                class="post-category-color-text"
+                                                                style="background:#d800f9"
+                                                                href="/category/{{ $p->kategori }}">Techno</a></span>
+                                                        <h3 class="feature-post-title"><a
+                                                                href="/post/{{ $p->slug }}">
+                                                                {{ $p->judul }}</a></h3>
+                                                        <span class="post-meta meta-main-img auto_image_with_date">
+                                                            <span class="post-date"><i
+                                                                    class="fa fa-clock-o"></i>{{ \Carbon\Carbon::parse($p->created_at)->isoFormat('D MMM Y') }}</span></span>
+                                                    </div>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </div>
@@ -395,60 +294,28 @@
                             </div><span class="jl_none_space"></span>
                             <div id="disto_recent_large_slider_widgets-5" class="widget jl_widget_slider">
                                 <div class="slider_widget_post jelly_loading_pro">
-                                    <div class="recent_post_large_widget"> <span class="image_grid_header_absolute"
-                                            style="background-image: url('img/380x350.png')"></span>
-                                        <a href="#" class="link_grid_header_absolute"
-                                            title="Standing right here and singing until the mid"></a> <span
-                                            class="meta-category-small"><a class="post-category-color-text"
-                                                style="background:#ed1c1c" href="#">Active</a></span>
-                                        <div class="wrap_box_style_main image-post-title">
-                                            <h3 class="image-post-title"><a href="#">
-                                                    Standing right here and singing until the mid</a></h3>
-                                            <span class="jl_post_meta"><span class="jl_author_img_w"><img
-                                                        src="/assets/disto/img/favicon.jpg" width="30" height="30"
-                                                        alt="Anna Nikova"
-                                                        class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                        href="#" title="Posts by Anna Nikova" rel="author">Anna
-                                                        Nikova</a></span><span class="post-date"><i
-                                                        class="fa fa-clock-o"></i>Dec 23, 2016</span></span>
+                                    @foreach ($favs as $f)
+                                        <div class="recent_post_large_widget"> <span
+                                                class="image_grid_header_absolute"
+                                                style="background-image: url('{{ $f->foto }}')"></span>
+                                            <a href="/post/{{ $f->slug }}" class="link_grid_header_absolute"
+                                                title="{{ $f->judul }}"></a> <span class="meta-category-small"><a
+                                                    class="post-category-color-text" style="background:#ed1c1c"
+                                                    href="/category/{{ $f->kategori }}">{{ $f->kategori }}</a></span>
+                                            <div class="wrap_box_style_main image-post-title">
+                                                <h3 class="image-post-title"><a href="/post/{{ $f->slug }}">
+                                                        {{ $f->judul }}</a></h3>
+                                                <span class="jl_post_meta"><span class="jl_author_img_w"><img
+                                                            src="/assets/disto/img/favicon.jpg" width="30" height="30"
+                                                            alt="{{ $f->author->nama }}"
+                                                            class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
+                                                            href="#" title="Posts by {{ $f->author->nama }}"
+                                                            rel="author">{{ $f->author->nama }}</a></span><span
+                                                        class="post-date"><i
+                                                            class="fa fa-clock-o"></i>{{ \Carbon\Carbon::parse($f->created_at)->isoFormat('D MMM Y') }}</span></span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="recent_post_large_widget"> <span class="image_grid_header_absolute"
-                                            style="background-image: url('img/380x350.png')"></span>
-                                        <a href="#" class="link_grid_header_absolute"
-                                            title="You can make your art with canyon color"></a> <span
-                                            class="meta-category-small"><a class="post-category-color-text"
-                                                style="background:#6b34ba" href="#">Gaming</a></span>
-                                        <div class="wrap_box_style_main image-post-title">
-                                            <h3 class="image-post-title"><a href="#">
-                                                    You can make your art with canyon color</a></h3>
-                                            <span class="jl_post_meta"><span class="jl_author_img_w"><img
-                                                        src="/assets/disto/img/favicon.jpg" width="30" height="30"
-                                                        alt="Anna Nikova"
-                                                        class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                        href="#" title="Posts by Anna Nikova" rel="author">Anna
-                                                        Nikova</a></span><span class="post-date"><i
-                                                        class="fa fa-clock-o"></i>Dec 23, 2016</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="recent_post_large_widget"> <span class="image_grid_header_absolute"
-                                            style="background-image: url('img/380x350.png')"></span>
-                                        <a href="#" class="link_grid_header_absolute"
-                                            title="Makeup it really important things to do"></a> <span
-                                            class="meta-category-small"><a class="post-category-color-text"
-                                                style="background:#6b34ba" href="#">Gaming</a></span>
-                                        <div class="wrap_box_style_main image-post-title">
-                                            <h3 class="image-post-title"><a href="#">
-                                                    Makeup it really important things to do</a></h3>
-                                            <span class="jl_post_meta"><span class="jl_author_img_w"><img
-                                                        src="/assets/disto/img/favicon.jpg" width="30" height="30"
-                                                        alt="Anna Nikova"
-                                                        class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                        href="#" title="Posts by Anna Nikova" rel="author">Anna
-                                                        Nikova</a></span><span class="post-date"><i
-                                                        class="fa fa-clock-o"></i>Dec 23, 2016</span></span>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <span class="jl_none_space"></span>
                             </div>
