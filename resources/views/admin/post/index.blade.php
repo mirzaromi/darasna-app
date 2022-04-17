@@ -15,10 +15,12 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-                <a href="/admin/post/create">
-                    <button type="button" class="btn btn-success mb-3"><i class="fas fa-plus mr-2"></i>Tambah
-                        Postingan</button>
-                </a>
+                @can('onlyAuthor')
+                    <a href="/admin/post/create">
+                        <button type="button" class="btn btn-success mb-3"><i class="fas fa-plus mr-2"></i>Tambah
+                            Postingan</button>
+                    </a>
+                @endcan
                 <table id="example1" class="table table-bordered table-hover">
                     <thead>
                         <tr>
@@ -45,11 +47,13 @@
                                                 <i class="far fa-eye"></i>
                                             </button>
                                         </a>
-                                        <a href="/admin/post/{{ $post->id }}/edit" class="text-white">
-                                            <button type="button" class="btn btn-warning text-light">
-                                                <i class="far fa-edit"></i>
-                                            </button>
-                                        </a>
+                                        @can('onlyAuthor')
+                                            <a href="/admin/post/{{ $post->id }}/edit" class="text-white">
+                                                <button type="button" class="btn btn-warning text-light">
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                            </a>
+                                        @endcan
                                         <button type="button" class="btn btn-danger" data-toggle="modal"
                                             data-target="#modal-default-{{ $post->id }}">
                                             <i class="fas fa-trash-alt"></i>
