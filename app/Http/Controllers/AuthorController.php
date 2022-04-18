@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Author;
+use App\Models\Post;
 use App\Http\Requests\StoreAuthorRequest;
 use App\Http\Requests\UpdateAuthorRequest;
 
@@ -86,9 +87,11 @@ class AuthorController extends Controller
 
     public function author($slug)
     {
+        $author = Author::where('slug', $slug)->first();
         return view('public.author.index',[
             'title1' => 'author',
             'authors' => Author::where('slug', $slug)->get(),
+            'posts' => Post::where('author_id', $author->id)->paginate(10),
         ]);
     }
 }

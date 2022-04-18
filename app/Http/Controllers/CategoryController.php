@@ -11,7 +11,7 @@ class CategoryController extends Controller
     {
         return view('public.category.index',[
             'title1' => 'kategori',
-            'posts' => Post::where('kategori',$kategori)->get()
+            'posts' => Post::where('kategori',$kategori)->paginate(10)
         ]);
     }
 }
