@@ -22,6 +22,12 @@
     object-fit: cover;
 }
 
+.img_grid_post {
+    width: 780px !important;
+    height: 200px !important;
+    object-fit: cover;
+}
+
 /* button like */
 .btn-like {
     width: 100px;

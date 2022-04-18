@@ -46,7 +46,7 @@
                                             <div class="image-post-thumb">
                                                 <a href="/post/{{ $p->slug }}" class="link_image featured-thumbnail"
                                                     title="{{ $p->judul }}">
-                                                    <img width="780" height="450" src="{{ $p->foto }}"
+                                                    <img width="780" height="450" src="{{ asset('storage/'.$p->foto) }}"
                                                         class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
                                                         alt="" />
                                                     <div class="background_over_image"></div>

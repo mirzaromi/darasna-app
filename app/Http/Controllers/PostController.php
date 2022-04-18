@@ -50,8 +50,10 @@ class PostController extends Controller
             'slug' => 'required',
             'isi' => 'required',
             'kategori' => 'required',
-            'tag' => 'required'
         ]);
+
+        $validate['foto'] = $request->file('foto')->store('post_foto');
+        $validate['author_id'] = auth()->user()->author_id;
 
         Post::create($validate);
         return redirect('/admin/post')->with('sukses', 'sukses menambahkan post baru!');
@@ -101,8 +103,14 @@ class PostController extends Controller
             'slug' => 'required',
             'isi' => 'required',
             'kategori' => 'required',
-            'tag' => 'required'
         ]);
+
+        if ($request['foto'] != null) {
+            $validate['foto'] = $request->file('foto')->store('post_foto');
+        }
+        else {
+            $validate['foto'] = $post->foto;
+        }
 
         Post::where('id', $post->id)->update($validate);
         return redirect('/admin/post')->with('sukses', 'sukses mengubah postingan!');

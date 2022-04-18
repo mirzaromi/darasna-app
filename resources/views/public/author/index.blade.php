@@ -39,7 +39,7 @@
                                                         <a href="/post/{{ $a->slug }}" class="link_image featured-thumbnail"
                                                             title="Round white dining table on brown hardwood">
                                                             <img width="780" height="450"
-                                                                src="{{ $a->foto }}"
+                                                                src="{{ asset('storage/'.$a->foto) }}"
                                                                 class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
                                                                 alt="" />
                                                             <div class="background_over_image"></div>

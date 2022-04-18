@@ -181,10 +181,10 @@ class PostSeeder extends Seeder
                 
                 <p>*) Penyuntingan oleh redaksi www.muslimah.or.id</p>',
                 'kategori' => 'AKIDAH',
-                'tag' => 'MAI',
+                
                 'author_id' => rand(1,4),
                 'slug' => 'tanya-jawab-seputar-akidah-'. $i,
-                'foto' =>'/assets/image/tanya jawab akidah.png',
+                'foto' =>'post_foto/tanya jawab akidah.png',
                 'view' => rand(1,1000),
                 'like' => rand(1,1000),
                 
@@ -216,10 +216,10 @@ class PostSeeder extends Seeder
                 
                 <p>Setelah balig, pahala tersebut diperoleh oleh anak tersebut dan juga kedua orang dua mendapatkan pahala yang sama bila amal taat atas petunjuk atau perintah kedua orang tuanya.&nbsp;</p>',
                 'kategori' => 'HUKUM',
-                'tag' => 'MAI',
+                
                 'author_id' => rand(1,4),
                 'slug' => 'puasa-untuk-anak-'. $i,
-                'foto' =>'/assets/image/hukum puasa untuk anak.png',
+                'foto' =>'post_foto/hukum puasa untuk anak.png',
                 'view' => rand(1,1000),
                 'like' => rand(1,1000),
                 
@@ -342,10 +342,10 @@ class PostSeeder extends Seeder
                 
                 <p>Demikian uraian tentang tokoh Islam dunia yang berpengaruh di dunia maupun di Indonesia. Tokoh-tokoh tersebut telah mengembangkan Islam menuju peradaban islam yang lebih baik hingga sampai saat ini Islam maju pesat.</p>',
                 'kategori' => 'SEJARAH',
-                'tag' => 'MAI',
+                
                 'author_id' => rand(1,4),
                 'slug' => 'sejarah-islam-'. $i,
-                'foto' =>'/assets/image/sejarah.png',
+                'foto' =>'post_foto/sejarah.png',
                 'view' => rand(1,1000),
                 'like' => rand(1,1000),
             ]);
@@ -417,10 +417,10 @@ class PostSeeder extends Seeder
                 <p>15. Al Battani (sekitar 850 &ndash; 923)<br />
                 Seorang ahli astronomi dan matematikawan dari Arab. Al Battani lahir di Harran dekat Urfa. Salah satu pencapaiannya yang terkenal adalah tentang penentuan tahun matahari sebagai 365 hari, 5 jam, 46 menit dan 24 detik. Al Battani juga menemukan sejumlah persamaan trigonometri.</p>',
                 'kategori' => 'TOKOH',
-                'tag' => 'MAI',
+                
                 'author_id' => rand(1,4),
                 'slug' => 'tokoh-maetmatikawan-islam-'. $i,
-                'foto' =>'/assets/image/tokoh matematika islam.png',
+                'foto' =>'post_foto/tokoh matematika islam.png',
                 'view' => rand(1,1000),
                 'like' => rand(1,1000),
                 

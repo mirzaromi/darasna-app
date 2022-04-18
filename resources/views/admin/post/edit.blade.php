@@ -52,16 +52,6 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="">Tag</label>
-                        <input type="text" class="form-control @error('tag') is-invalid @enderror" id=""
-                            placeholder="Input Tag" value="{{ old('tag', $post->tag) }}" name="tag" required>
-                        @error('tag')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                    </div>
-                    <div class="form-group">
                         <label for="exampleInputFile">Upload Image</label>
                         <div class="input-group">
                             <div class="custom-file">

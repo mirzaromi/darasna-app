@@ -49,7 +49,7 @@
                                             </div>
                                             <div class="single_content_header jl_single_feature_below">
                                                 <div class="image-post-thumb jlsingle-title-above">
-                                                    <img width="1000" height="668" src="{{ $post[0]->foto }}"
+                                                    <img width="1000" height="668" src="{{ asset('storage/' . $post[0]->foto)  }}"
                                                         class="attachment-disto_justify_feature size-disto_justify_feature wp-post-image"
                                                         alt="" />
                                                 </div>
@@ -107,7 +107,7 @@
                                             </div>
                                         @endif
 
-                                        @if ($right->id < App\Models\Post::count())
+                                        @if ($right != null)
                                             <div class="postnav_right">
                                                 <div class="single_post_arrow_content">
                                                     <a href="/post/{{ $right->slug }}" id="nextpost">
@@ -154,8 +154,8 @@
                                                                     class="link_image featured-thumbnail"
                                                                     title="{{ $pst->title }}">
                                                                     <img width="780" height="450"
-                                                                        src="{{ $pst->foto }}"
-                                                                        class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
+                                                                        src="{{ asset('storage/'.$pst->foto) }}"
+                                                                        class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image img_grid_post"
                                                                         alt="" />
                                                                     <div class="background_over_image"></div>
                                                                 </a>
@@ -268,8 +268,8 @@
                                                     <a href="/post/{{ $p->slug }}"
                                                         class="jl_small_format feature-image-link image_post featured-thumbnail"
                                                         title="{{ $p->judul }}">
-                                                        <img width="120" height="120" src="{{ $p->foto }}"
-                                                            class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
+                                                        <img width="120" height="120" src="{{ asset('storage/'.$p->foto) }}"
+                                                            class="attachment-disto_small_feature size-disto_small_feature wp-post-image img_pop"
                                                             alt="" />
                                                         <div class="background_over_image"></div>
                                                     </a>
@@ -297,7 +297,7 @@
                                     @foreach ($favs as $f)
                                         <div class="recent_post_large_widget"> <span
                                                 class="image_grid_header_absolute"
-                                                style="background-image: url('{{ $f->foto }}')"></span>
+                                                style="background-image: url('{{ asset('storage/'.$f->foto) }}')"></span>
                                             <a href="/post/{{ $f->slug }}" class="link_grid_header_absolute"
                                                 title="{{ $f->judul }}"></a> <span class="meta-category-small"><a
                                                     class="post-category-color-text" style="background:#ed1c1c"

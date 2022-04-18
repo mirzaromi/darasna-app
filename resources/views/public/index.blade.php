@@ -29,7 +29,7 @@
                                                         <div class="item">
                                                             <div class="banner-carousel-item"> <span
                                                                     class="image_grid_header_absolute"
-                                                                    style="background-image: url('{{ $c->foto }}')"></span>
+                                                                    style="background-image: url('{{ asset('storage/'.$c->foto) }}')"></span>
                                                                 <a href="/post/{{ $c->slug }}"
                                                                     class="link_grid_header_absolute"></a>
                                                                 <div class="banner-container">
@@ -50,7 +50,7 @@
                                                                                                     @break
                                                                                                 @default
                                                                                                     style="background:#1232b1" @endswitch
-                                                                                            href="/assets/disto/#">{{ $c->kategori }}</a></span>
+                                                                                            href="/category/{{ $c->kategori }}">{{ $c->kategori }}</a></span>
                                                                                     <h5><a
                                                                                             href="/post/{{ $c->slug }}">{{ $c->judul }}</a>
                                                                                     </h5>
@@ -81,7 +81,7 @@
                                                                 <div class="item">
                                                                     <div class="banner-carousel-item"> <span
                                                                             class="image_small_nav"
-                                                                            style="background-image: url('{{ $c->foto }}')"></span>
+                                                                            style="background-image: url('{{ asset('storage/'.$c->foto) }}')"></span>
                                                                         <h5>
                                                                             {{ $c->judul }}
                                                                         </h5>
@@ -125,8 +125,8 @@
                                                             <a href="/post/{{ $p->slug }}"
                                                                 class="link_image featured-thumbnail"
                                                                 title="{{ $p->judul }}">
-                                                                <img width="780" height="450" src="{{ $p->foto }}"
-                                                                    class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image"
+                                                                <img width="780" height="450" src="{{ asset('storage/' . $p->foto) }}"
+                                                                    class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image img_grid_post"
                                                                     alt="" />
                                                                 <div class="background_over_image"></div>
                                                             </a> <span class="meta-category-small"><a
@@ -144,7 +144,7 @@
                                                                         @default
                                                                             style="background:#1232b1" 
                                                                     @endswitch
-                                                                    href="/assets/disto/#">{{ $p->kategori }}</a></span>
+                                                                    href="/category/{{ $p->kategori }}">{{ $p->kategori }}</a></span>
                                                         </div>
                                                         <div class="post-entry-content">
                                                             <h3 class="image-post-title"><a
@@ -191,7 +191,7 @@
                                     </div>
                                     <div class="jl_main_post_style_padding">
                                         <div class="jl_main_post_style"> <span class="image_grid_header_absolute"
-                                                style="background-image: url('{{ $popular_post[0]->foto }}')"></span>
+                                                style="background-image: url('{{ asset('storage/'.$popular_post[0]->foto) }}')"></span>
                                             <a href="/post/{{ $popular_post[0]->slug }}" class="link_grid_header_absolute"
                                                 title="{{ $popular_post[0]->judul }}"></a>
                                             <div class="post-entry-content"> <span class="meta-category-small"><a
@@ -209,7 +209,7 @@
                                                             @default
                                                                 style="background:#1232b1" 
                                                         @endswitch
-                                                        href="/assets/disto/#">{{ $popular_post[0]->kategori }}</a></span>
+                                                        href="/category/{{ $popular_post[0]->kategori }}">{{ $popular_post[0]->kategori }}</a></span>
                                                 <h3 class="image-post-title"><a href="/post/{{ $popular_post[0]->slug }}">
                                                         {{ $popular_post[0]->judul }}</a>
                                                 </h3>
@@ -227,7 +227,7 @@
                                         <div class="jl_list_post_wrapper">
                                             <a href="/post/{{ $o->slug }}"
                                                 class="jl_small_format feature-image-link image_post featured-thumbnail">
-                                                <img width="100" height="100%" src="{{ $o->foto }}"
+                                                <img width="100" height="100%" src="{{ asset('storage/'.$o->foto) }}"
                                                     class="attachment-disto_small_feature size-disto_small_feature wp-post-image img_pop"
                                                     alt="" />
                                                 <div class="background_over_image"></div>
@@ -247,7 +247,7 @@
                                                             @default
                                                                 style="background:#1232b1" 
                                                         @endswitch
-                                                        href="/assets/disto/#">{{ $o->kategori }}</a></span>
+                                                        href="/category/{{ $o->kategori }}">{{ $o->kategori }}</a></span>
                                                 <h3 class="feature-post-title"><a href="/post/{{ $o->slug }}">
                                                         {{ $o->judul }}</a>
                                                 </h3>
@@ -388,7 +388,7 @@
             </div>
             <!-- end content -->
             <!-- Start footer -->
-            @include('public.partial.footer')
+            @include('public.partial.footer', ['kategori' => $kategori = App\Models\Post::select('kategori')->distinct()->get()])
             <!-- End footer -->
         </div>
     </div>

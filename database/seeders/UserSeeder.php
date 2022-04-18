@@ -24,24 +24,28 @@ class UserSeeder extends Seeder
             'username' => 'muhammadhaikal',
             'password' => bcrypt('muhammadhaikal'),
             'role' => 'author',
+            'author_id' => 1,
         ]);
 
         User::create([
             'username' => 'abdurrohman',
             'password' => bcrypt('abdurrohman'),
             'role' => 'author',
+            'author_id' => 2,
         ]);
 
         User::create([
             'username' => 'amarmaruf',
             'password' => bcrypt('amarmaruf'),
             'role' => 'author',
+            'author_id' => 3,
         ]);
 
         User::create([
             'username' => 'muzammil',
             'password' => bcrypt('muzammil'),
             'role' => 'author',
+            'author_id' => 4,
         ]);
     }
 }
