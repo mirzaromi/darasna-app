@@ -28,6 +28,12 @@
     object-fit: cover;
 }
 
+.img_insta {
+    width: 262.5px !important;
+    height: 327.88px !important;
+    object-fit: cover;
+}
+
 /* button like */
 .btn-like {
     width: 100px;
