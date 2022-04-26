@@ -33,7 +33,11 @@ Route::get('/post/{slug}',[PostController::class,'single_post'])->name('post');
 Route::get('/author/{slug}',[AuthorController::class,'author']);
 Route::get('/all_post', [PostController::class,'all']);
 
-
+Route::get('/profile/crew', function() {
+    return view('public.profile.crew',[
+        'title1' => 'Crew'
+    ]);
+});
 
 
 Route::resource('/comment',CommentController::class);
