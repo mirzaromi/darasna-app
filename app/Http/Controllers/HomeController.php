@@ -19,26 +19,40 @@ class HomeController extends Controller
         $carousel_post = array($akidah[0], $hukum[0], $sejarah[0], $tokoh[0]);
         // dd($carousel_post);
 
-        $instagram = \InstagramScraper\Instagram::withCredentials(new \GuzzleHttp\Client(), 'mai.amanatulummah.pacet', 'Suksesptn01', new Psr16Adapter('Files'));
-        $instagram->login();
-        $instagram->saveSession();
-        $account = $instagram->getAccount('darasna.network');
-        $accountMedias = $account->getMedias();
+        // $instagram = \InstagramScraper\Instagram::withCredentials(new \GuzzleHttp\Client(), 'zidan.abidin07', 'Zidanstart11', new Psr16Adapter('Files'));
+        // $instagram->login();
+        // $instagram->saveSession();
+        // $account = $instagram->getAccount('darasna.network');
+        // $accountMedias = $account->getMedias();
         // dd($accountMedias);
         // dd($posts[2]->getImageHighResolutionUrl());
         // dd($accountMedias[0]->getImageHighResolutionUrl());
         // dd($accountMedias);
-        foreach ($accountMedias as $key => $accountMedia) 
-        {
-            // dump($key);
-            $images[$key] = str_replace("&amp;","&",$accountMedia->getImageHighResolutionUrl());
-            // dump($images[$key]);
-            $path = $accountMedia->getImageHighResolutionUrl();
-            $imageName = $key.'.png';
-            $img = public_path('insta/images'. $imageName);
-            // dump($img);
-            file_put_contents($img, file_get_contents($path));
+
+        for ($i=0; $i < 12; $i++) { 
+            $images[$i] = $i;
         }
+
+        // foreach ($images as $key => $i) {
+        //     dump($key);
+        //     dump($i);
+        // }
+        // die();
+        // dd($images);
+
+        // foreach ($accountMedias as $key => $accountMedia) 
+        // {
+        //     // dump($key);
+        //     $images[$key] = str_replace("&amp;","&",$accountMedia->getImageHighResolutionUrl());
+        //     // $images[$key] = "a";
+        //     // dump($images[$key]);
+        //     $path = $accountMedia->getImageHighResolutionUrl();
+        //     $imageName = $key.'.png';
+        //     $img = public_path('insta/images'. $imageName);
+        //     // // dump($img);
+        //     file_put_contents($img, file_get_contents($path));
+        // }
+        // dd($images);
         // die();
         return view('public.index', [
             'title1' => 'Home',

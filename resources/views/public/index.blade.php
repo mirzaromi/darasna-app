@@ -283,8 +283,7 @@
                                                     class="attachment-disto_slider_grid_small size-disto_slider_grid_small wp-post-image img_insta"
                                                     alt="" />
                                                 <div class="background_over_image"></div>
-                                            </a> <span class="meta-category-small"><a class="post-category-color-text"
-                                                    style="background:#36c942" href="/assets/disto/#">Sports</a></span>
+                                            </a> 
                                         </div>
                                         <div class="post-entry-content">
                                             <h3 class="image-post-title"><a href="/assets/disto/#">
