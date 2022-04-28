@@ -39,6 +39,12 @@ Route::get('/profile/crew', function() {
     ]);
 });
 
+Route::get('/profile/about-us', function() {
+    return view('public.profile.about_us',[
+        'title1' => 'About Us'
+    ]);
+});
+
 
 Route::resource('/comment',CommentController::class);
 

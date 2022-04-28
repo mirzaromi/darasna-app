@@ -33,7 +33,7 @@
                                                 <li class="menu-item"> <a href="/assets/disto/#">Profile
                                                         Singkat<span class="border-menu"></span></a>
                                                 </li>
-                                                <li class="menu-item"><a href="/assets/disto/author.html">Crew<span
+                                                <li class="menu-item"><a href="/profile/crew">Crew<span
                                                             class="border-menu"></span></a>
                                                 </li>
                                             </ul>
