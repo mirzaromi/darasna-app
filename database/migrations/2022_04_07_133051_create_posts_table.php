@@ -21,6 +21,8 @@ class CreatePostsTable extends Migration
             $table->foreignId('author_id')->nullable();
             $table->string('slug')->unique();
             $table->string('foto')->nullable();
+            $table->string('foto_vertical')->nullable();
+            $table->string('foto_horizontal')->nullable();
             $table->integer('view')->nullable();
             $table->integer('like')->nullable();
             $table->timestamps();

@@ -187,7 +187,7 @@ class PostController extends Controller
 
     public function like(Post $post, Request $request)
     {
-        
+    
         $like = $post->get_like($request->post_id);
         // $like = $post->get_like($request->post_id);
         if ($request->like === "Like") {
