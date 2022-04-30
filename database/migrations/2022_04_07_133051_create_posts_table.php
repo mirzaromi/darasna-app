@@ -22,7 +22,9 @@ class CreatePostsTable extends Migration
             $table->string('slug')->unique();
             $table->string('foto')->nullable();
             $table->string('foto_vertical')->nullable();
+            $table->integer('on_parag')->nullable();
             $table->string('foto_horizontal')->nullable();
+            $table->string('before_parag')->nullable();
             $table->integer('view')->nullable();
             $table->integer('like')->nullable();
             $table->timestamps();

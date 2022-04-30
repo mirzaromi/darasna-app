@@ -45,6 +45,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        
         $validate = $request->validate([
             'judul' => 'required',
             'slug' => 'required',
@@ -54,6 +55,12 @@ class PostController extends Controller
 
         $validate['foto'] = $request->file('foto')->store('post_foto');
         $validate['author_id'] = auth()->user()->author_id;
+
+        if($request->file('foto_horizontal'))
+        {
+            $validate['foto_horizontal'] = $request->file('foto_horizontal')->store('post_foto_horizontal');
+            $validate['before_parag'] = $request->before_parag;
+        }
 
         Post::create($validate);
         return redirect('/admin/post')->with('sukses', 'sukses menambahkan post baru!');
@@ -103,6 +110,7 @@ class PostController extends Controller
             'slug' => 'required',
             'isi' => 'required',
             'kategori' => 'required',
+            'before_parag' => 'required'
         ]);
 
         if ($request['foto'] != null) {
@@ -111,6 +119,12 @@ class PostController extends Controller
         else {
             $validate['foto'] = $post->foto;
         }
+
+        if($request->file('foto_horizontal'))
+        {
+            $validate['foto_horizontal'] = $request->file('foto_horizontal')->store('post_foto_horizontal');
+        }
+        // $validate['before_parag'] = $request->before_parag;
 
         Post::where('id', $post->id)->update($validate);
         return redirect('/admin/post')->with('sukses', 'sukses mengubah postingan!');

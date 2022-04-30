@@ -49,7 +49,8 @@
                                             </div>
                                             <div class="single_content_header jl_single_feature_below">
                                                 <div class="image-post-thumb jlsingle-title-above">
-                                                    <img width="1000" height="668" src="{{ asset('storage/' . $post[0]->foto)  }}"
+                                                    <img width="1000" height="668"
+                                                        src="{{ asset('storage/' . $post[0]->foto) }}"
                                                         class="attachment-disto_justify_feature size-disto_justify_feature wp-post-image"
                                                         alt="" />
                                                 </div>
@@ -154,7 +155,7 @@
                                                                     class="link_image featured-thumbnail"
                                                                     title="{{ $pst->title }}">
                                                                     <img width="780" height="450"
-                                                                        src="{{ asset('storage/'.$pst->foto) }}"
+                                                                        src="{{ asset('storage/' . $pst->foto) }}"
                                                                         class="attachment-disto_large_feature_image size-disto_large_feature_image wp-post-image img_grid_post"
                                                                         alt="" />
                                                                     <div class="background_over_image"></div>
@@ -246,6 +247,7 @@
             <!-- Start footer -->
             @include('public.partial.footer')
             @include('public.partial.script')
+
             <script>
                 const btn = document.querySelector('#like');
                 const post_id = document.querySelector('#post_id');
@@ -267,6 +269,26 @@
                     // console.log(this.textContent);
 
                 });
+            </script>
+            <script>
+
+                console.log("{{ $post[0]->judul }}");
+                const post = document.querySelector('.post_content');
+                console.log(post.children[4].innerHTML);
+                const pNode = document.createElement('p');
+
+                const newNode = document.createElement('img');
+                newNode.className = "size-full wp-image-4866 alignnone";
+
+                newNode.setAttribute('src', "{{ asset('storage/'.$post[0]->foto_horizontal) }}");
+                
+
+                newNode.setAttribute('width', '1920');
+                newNode.setAttribute('height', '1000');
+
+                pNode.appendChild(newNode);
+
+                post.children["{{ $post[0]->before_parag }}"].parentNode.insertBefore(pNode, post.children[{{ $post[0]->before_parag }}].nextSibling);
             </script>
 </body>
 
