@@ -27,12 +27,9 @@
                                         <li class="menu-item menu-item-has-children"> <a
                                                 href="/assets/disto/#">Profile<span class="border-menu"></span></a>
                                             <ul class="sub-menu">
-                                                <li class="menu-item"> <a href="/assets/disto/#">About Us<span
+                                                <li class="menu-item"> <a href="/profile/about-us">About Us<span
                                                             class="border-menu"></span></a>
-                                                </li>
-                                                <li class="menu-item"> <a href="/assets/disto/#">Profile
-                                                        Singkat<span class="border-menu"></span></a>
-                                                </li>
+                                                </li>                                                
                                                 <li class="menu-item"><a href="/profile/crew">Crew<span
                                                             class="border-menu"></span></a>
                                                 </li>
@@ -55,7 +52,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item"><a href="/assets/disto/gaming.html">Contact Us<span
+                                        <li class="menu-item"><a href="/contact">Contact Us<span
                                                     class="border-menu"></span></a>
                                         </li>
                                         <li class="menu-item"><a href="/all_post">All Post<span
@@ -99,13 +96,10 @@
                         <li class="menu-item menu-item-has-children"> <a href="/assets/disto/#">Profile<span
                                     class="border-menu"></span></a>
                             <ul class="sub-menu">
-                                <li class="menu-item"> <a href="/assets/disto/#">About Us<span
+                                <li class="menu-item"> <a href="/profile/about-us">About Us<span
                                             class="border-menu"></span></a>
                                 </li>
-                                <li class="menu-item"> <a href="/assets/disto/#">Profile
-                                        Singkat<span class="border-menu"></span></a>
-                                </li>
-                                <li class="menu-item"><a href="/assets/disto/author.html">Crew<span
+                                <li class="menu-item"><a href="/profile/crew">Crew<span
                                             class="border-menu"></span></a>
                                 </li>
                             </ul>
@@ -127,7 +121,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="/assets/disto/gaming.html">Contact Us<span
+                        <li class="menu-item"><a href="/contact">Contact Us<span
                                     class="border-menu"></span></a>
                         </li>
                         <li class="menu-item"><a href="/all_post">All Post<span class="border-menu"></span></a>

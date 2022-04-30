@@ -113,3 +113,36 @@
     display: inline-block;
     margin-bottom: 10px;
 }
+
+/* Kontak */
+
+.map-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-heading {
+    /* margin-left: 15px; */
+}
+
+.contact-heading::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 160px;
+    background-color: #000;
+}
+
+.contact-wrapper {
+    margin-top: 20px;
+}
+
+.contact-wrapper p {
+    margin-bottom: 0px;
+}

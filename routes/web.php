@@ -45,6 +45,12 @@ Route::get('/profile/about-us', function() {
     ]);
 });
 
+Route::get('/contact', function() {
+    return view('public.contact.contact',[
+        'title1' => 'About Us'
+    ]);
+});
+
 
 Route::resource('/comment',CommentController::class);
 
