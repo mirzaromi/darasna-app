@@ -271,7 +271,6 @@
                 });
             </script>
             <script>
-
                 console.log("{{ $post[0]->judul }}");
                 const post = document.querySelector('.post_content');
                 console.log(post.children[4].innerHTML);
@@ -280,15 +279,25 @@
                 const newNode = document.createElement('img');
                 newNode.className = "size-full wp-image-4866 alignnone";
 
-                newNode.setAttribute('src', "{{ asset('storage/'.$post[0]->foto_horizontal) }}");
-                
+                newNode.setAttribute('src', "{{ asset('storage/' . $post[0]->foto_horizontal) }}");
+
 
                 newNode.setAttribute('width', '1920');
                 newNode.setAttribute('height', '1000');
 
                 pNode.appendChild(newNode);
 
-                post.children["{{ $post[0]->before_parag }}"].parentNode.insertBefore(pNode, post.children[{{ $post[0]->before_parag }}].nextSibling);
+                post.children["{{ $post[0]->before_parag }}"].parentNode.insertBefore(pNode, post.children[
+                    "{{ $post[0]->before_parag }}"].nextSibling);
+
+                const img2 = document.createElement('img');
+                img2.className = "wp-image-4861 alignleft";
+                img2.setAttribute('src', "{{ asset('storage/'.$post[0]->foto_vertical) }}");
+                img2.setAttribute('width', '338');
+                img2.setAttribute('height', '423');
+
+                const pImg = post.children["{{ $post[0]->on_parag }}"];
+                pImg.insertBefore(img2, pImg.firstChild);
             </script>
 </body>
 

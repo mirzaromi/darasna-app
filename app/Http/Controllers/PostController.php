@@ -62,6 +62,12 @@ class PostController extends Controller
             $validate['before_parag'] = $request->before_parag;
         }
 
+        if($request->file('foto_vertical'))
+        {
+            $validate['foto_vertical'] = $request->file('foto_vertical')->store('post_foto_vertical');
+            $validate['on_parag'] = $request->on_parag;
+        }
+
         Post::create($validate);
         return redirect('/admin/post')->with('sukses', 'sukses menambahkan post baru!');
     }
@@ -110,7 +116,8 @@ class PostController extends Controller
             'slug' => 'required',
             'isi' => 'required',
             'kategori' => 'required',
-            'before_parag' => 'required'
+            // 'before_parag' => 'required',
+            // 'on_parag' => 'required',
         ]);
 
         if ($request['foto'] != null) {
@@ -124,7 +131,13 @@ class PostController extends Controller
         {
             $validate['foto_horizontal'] = $request->file('foto_horizontal')->store('post_foto_horizontal');
         }
-        // $validate['before_parag'] = $request->before_parag;
+        $validate['before_parag'] = $request->before_parag;
+
+        if($request->file('foto_vertical'))
+        {
+            $validate['foto_vertical'] = $request->file('foto_vertical')->store('post_foto_vertical');
+        }
+        $validate['on_parag'] = $request->on_parag;
 
         Post::where('id', $post->id)->update($validate);
         return redirect('/admin/post')->with('sukses', 'sukses mengubah postingan!');

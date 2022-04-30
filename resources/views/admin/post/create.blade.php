@@ -96,6 +96,37 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="exampleInputFile">Upload Image Vertical</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input @error('foto_vertical') is-invalid @enderror"
+                                            id="exampleInputFile" name="foto_vertical">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </div>
+                                    @error('foto_vertical')
+                                        <div class="invalid-feedback d-block">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="">Pada Paragraf Berapa?</label>
+                                <input type="text" class="form-control @error('on_parag') is-invalid @enderror" id="on_parag"
+                                    placeholder="Input pada paragraf berapa?" name="on_parag" value="{{ old('on_parag') }}" required>
+                                @error('on_parag')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
                     {{-- <div class="form-group">
                     <label>Author</label>
                     <select class="form-control @error('author_id') is-invalid @enderror select2bs4" style="width: 100%;"
