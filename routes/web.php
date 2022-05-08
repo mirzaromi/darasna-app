@@ -30,6 +30,7 @@ Route::get('/logout', [LoginController::class,'logout']);
 
 Route::post('/post/inc/{slug}',[PostController::class,'inc_post_watch'])->name('increment_post');
 Route::get('/post/{slug}',[PostController::class,'single_post'])->name('post');
+Route::get('/post/{slug}/download-post-pdf',[PostController::class, 'download_post'])->name('download');
 Route::get('/author/{slug}',[AuthorController::class,'author']);
 Route::get('/all_post', [PostController::class,'all']);
 

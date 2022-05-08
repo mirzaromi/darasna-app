@@ -286,17 +286,17 @@
                                             </a> 
                                         </div>
                                         <div class="post-entry-content">
-                                            <h3 class="image-post-title"><a href="/assets/disto/#">
+                                            {{-- <h3 class="image-post-title"><a href="/assets/disto/#">
                                                     This place really good place for reading</a>
-                                            </h3>
-                                            <span class="jl_post_meta"><span class="jl_author_img_w"> <img
+                                            </h3> --}}
+                                            {{-- <span class="jl_post_meta"><span class="jl_author_img_w"> <img
                                                         src="/assets/disto/img/favicon.jpg" width="30" height="30"
                                                         alt="Anna Nikova"
                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                         href="/assets/disto/#" title="Posts by Anna Nikova"
                                                         rel="author">Anna
                                                         Nikova</a></span><span class="post-date"><i
-                                                        class="fa fa-clock-o"></i>Dec 24, 2016</span></span>
+                                                        class="fa fa-clock-o"></i>Dec 24, 2016</span></span> --}}
                                         </div>
                                     </div>
                                 </div>
