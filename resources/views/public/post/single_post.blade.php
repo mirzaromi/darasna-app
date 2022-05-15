@@ -61,13 +61,13 @@
                                         </div>
                                         <div class="clearfix"></div>
                                         <div class="single_tag_share">
-                                            <div class="tag-cat">
+                                            {{-- <div class="tag-cat">
                                                 <ul class="single_post_tag_layout">
                                                     <li><a href="#" rel="tag">Gaming</a></li>
                                                     <li><a href="#" rel="tag">morning</a></li>
                                                     <li><a href="#" rel="tag">Relaxing</a></li>
                                                 </ul>
-                                            </div>
+                                            </div> --}}
                                             <div>
                                                 <div>
                                                     <button id="like" class="btn-like">Like</button>

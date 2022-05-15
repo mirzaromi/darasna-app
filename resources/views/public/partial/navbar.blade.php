@@ -25,7 +25,7 @@
                                                     class="border-menu"></span></a>
                                         </li>
                                         <li class="menu-item menu-item-has-children"> <a
-                                                href="/assets/disto/#">Profile<span class="border-menu"></span></a>
+                                                href="#">Profile<span class="border-menu"></span></a>
                                             <ul class="sub-menu">
                                                 <li class="menu-item"> <a href="/profile/about-us">About Us<span
                                                             class="border-menu"></span></a>

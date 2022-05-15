@@ -76,13 +76,11 @@
                     Powered by Darasna Network</div>
                 <div class="col-md-6 footer-menu-bottom">
                     <ul id="menu-footer-menu" class="menu-footer">
-                        <li class="menu-item menu-item-10"><a href="/assets/disto/#">About Us</a>
+                        <li class="menu-item menu-item-10"><a href="/profile/about-us">About Us</a>
                         </li>
-                        <li class="menu-item menu-item-11"><a href="/assets/disto/#">Profil Singkat</a>
+                        <li class="menu-item menu-item-12"><a href="/profile/crew">Crew</a>
                         </li>
-                        <li class="menu-item menu-item-12"><a href="/assets/disto/#">Crew</a>
-                        </li>
-                        <li class="menu-item menu-item-13"><a href="/assets/disto/#">Contact Us</a>
+                        <li class="menu-item menu-item-13"><a href="/contact">Contact Us</a>
                         </li>
                     </ul>
                 </div>
