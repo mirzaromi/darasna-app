@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Comment;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use Illuminate\Http\Request;
@@ -25,7 +26,7 @@ class PostController extends Controller
         return view('admin.post.index', [
             'title1' => 'post',
             'title2' => 'daftar_post',
-            'posts' => Post::get()
+            'posts' => Post::where('author_id', auth()->user()->author_id)->orderBy('judul','asc')->get()
         ]);
     }
 
@@ -36,9 +37,11 @@ class PostController extends Controller
      */
     public function create()
     {
+        $kategori = Post::select('kategori')->distinct()->get();
         return view('admin.post.create', [
             'title1' => 'post',
             'title2' => 'daftar_post',
+            'kategori' => $kategori
         ]);
     }
 
@@ -167,10 +170,12 @@ class PostController extends Controller
         $favs = Post::orderBy('like')->take(4)->get();
         $left = Post::where('id', $get_post[0]->id - 1)->first();
         $right = Post::where('id', $get_post[0]->id + 1)->first();
-
+        $comment = Comment::where('post_id',$get_post[0]->id)->count();
+        
         return view('public.post.single_post', [
             'title1' => 'Post',
             'post' => Post::where('slug', $slug)->get(),
+            'comment' => $comment,
             'kategori' => $kategori,
             'posts' => $posts,
             'favs' => $favs,

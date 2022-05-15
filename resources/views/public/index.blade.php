@@ -267,18 +267,22 @@
 
             <div class="jl_home_section">
                 <div class="container">
-
                     <div
                         class="jelly_homepage_builder jl_nonav_margin homepage_builder_3grid_post jl_fontsize18 jl_cus_grid4   colstyle1    ">
                         <div class="jl_wrapper_row jl-post-block-111621">
+                            <div class="homepage_builder_title">
+                                <h2 class="builder_title_home_page">
+                                    Postingan Instagram Terbaru
+                                </h2>
+                            </div>
                             <div class="row" id="instagram">
                                 @foreach ($instagram  as $key => $image)
                                     
                                 <div class="col-md-4 blog_grid_post_style  jl_row_1">
                                     <div class="jl_grid_box_wrapper">
                                         <div class="image-post-thumb">
-                                            <a href="/assets/disto/#" class="link_image featured-thumbnail"
-                                                title="This place really good place for reading">
+                                            <a href="" class="link_image featured-thumbnail"
+                                                title="">
                                                 <img width="400" height="280" src="{{url('insta/')}}/{{'images'.$key.'.png'}}"
                                                     class="attachment-disto_slider_grid_small size-disto_slider_grid_small wp-post-image img_insta"
                                                     alt="" />

@@ -38,14 +38,20 @@
                                                                 class="avatar avatar-50 wp-user-avatar wp-user-avatar-50 alignnone photo" /><a
                                                                 href="#" title="Posts by {{ $post[0]->author->nama }}"
                                                                 rel="author">{{ $post[0]->author->nama }}</a></span></span><span
-                                                        class="post-date updated"><i class="fa fa-clock-o"></i>Dec
-                                                        23, 2016</span><span class="meta-comment"><i
-                                                            class="fa fa-comment"></i><a href="#">0
-                                                            Comment</a></span><a href="#" class="jm-post-like"
+                                                        class="post-date updated"><i
+                                                            class="fa fa-clock-o"></i>{{ \Carbon\Carbon::parse($post[0]->created_at)->isoFormat('D MMM Y') }}</span><span
+                                                        class="meta-comment"><i class="fa fa-comment"></i><a
+                                                            href="#">{{ $comment }}
+                                                            @if ($comment > 1)
+                                                                Comments
+                                                            @else
+                                                                Comment
+                                                            @endif
+                                                        </a></span><a href="#" class="jm-post-like"
                                                         data-post_id="2808" title="Like"><i
-                                                            class="fa fa-heart-o"></i>4</a><span
+                                                            class="fa fa-heart-o"></i>{{ $post[0]->like }}</a><span
                                                         class="view_options"><i
-                                                            class="fa fa-eye"></i>4.8k</span></span>
+                                                            class="fa fa-eye"></i>{{ $post[0]->view }}</span></span>
                                             </div>
                                             <div class="single_content_header jl_single_feature_below">
                                                 <div class="image-post-thumb jlsingle-title-above">
@@ -292,7 +298,7 @@
 
                 const img2 = document.createElement('img');
                 img2.className = "wp-image-4861 alignleft";
-                img2.setAttribute('src', "{{ asset('storage/'.$post[0]->foto_vertical) }}");
+                img2.setAttribute('src', "{{ asset('storage/' . $post[0]->foto_vertical) }}");
                 img2.setAttribute('width', '338');
                 img2.setAttribute('height', '423');
 

@@ -40,7 +40,7 @@
                             </div>
                         @enderror
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="">Kategori</label>
                         <input type="text" class="form-control @error('kategori') is-invalid @enderror" id=""
                             placeholder="Input Kategori" value="{{ old('kategori') }}" name="kategori" required>
@@ -49,6 +49,15 @@
                                 {{ $message }}
                             </div>
                         @enderror
+                    </div> --}}
+                    <div class="form-group">
+                        <label>Kategori</label>
+                        <select class="form-control select2bs4" style="width: 100%;">
+                            @foreach ($kategori as $k)
+                                <option>{{ $k->kategori }}</option>
+                            @endforeach
+
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputFile">Upload Image Cover</label>
@@ -71,7 +80,8 @@
                                 <label for="exampleInputFile">Upload Image Horizontal</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input @error('foto_horizontal') is-invalid @enderror"
+                                        <input type="file"
+                                            class="custom-file-input @error('foto_horizontal') is-invalid @enderror"
                                             id="exampleInputFile" name="foto_horizontal">
                                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                     </div>
@@ -86,8 +96,9 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Sebelum Paragraf Berapa?</label>
-                                <input type="text" class="form-control @error('before_parag') is-invalid @enderror" id="before_parag"
-                                    placeholder="Input sebelum paragraf berapa?" name="before_parag" value="{{ old('before_parag') }}" required>
+                                <input type="text" class="form-control @error('before_parag') is-invalid @enderror"
+                                    id="before_parag" placeholder="Input sebelum paragraf berapa?" name="before_parag"
+                                    value="{{ old('before_parag') }}" required>
                                 @error('before_parag')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -102,7 +113,8 @@
                                 <label for="exampleInputFile">Upload Image Vertical</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input @error('foto_vertical') is-invalid @enderror"
+                                        <input type="file"
+                                            class="custom-file-input @error('foto_vertical') is-invalid @enderror"
                                             id="exampleInputFile" name="foto_vertical">
                                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                     </div>
@@ -117,8 +129,9 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Pada Paragraf Berapa?</label>
-                                <input type="text" class="form-control @error('on_parag') is-invalid @enderror" id="on_parag"
-                                    placeholder="Input pada paragraf berapa?" name="on_parag" value="{{ old('on_parag') }}" required>
+                                <input type="text" class="form-control @error('on_parag') is-invalid @enderror"
+                                    id="on_parag" placeholder="Input pada paragraf berapa?" name="on_parag"
+                                    value="{{ old('on_parag') }}" required>
                                 @error('on_parag')
                                     <div class="invalid-feedback">
                                         {{ $message }}

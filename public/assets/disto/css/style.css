@@ -17690,7 +17690,7 @@ p.notfound_p_text {
 }
 .single-post-meta-wrapper .jm-post-like {
     font-size: 11px !important;
-    letter-spacing: 0.2em;
+    /* letter-spacing: 0.2em; */
 }
 .single-post-meta-wrapper span a {
     font-size: 12px;

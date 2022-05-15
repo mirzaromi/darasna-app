@@ -27,19 +27,19 @@
                             <th>No</th>
                             <th>Judul</th>
                             <th>Kategori</th>
-                            <th>Tag</th>
-                            <th>Author</th>
+                            {{-- <th>Tag</th> --}}
+                            {{-- <th>Author</th> --}}
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($posts as $post)
                             <tr>
-                                <td>{{ $post->id }}</td>
+                                <td>{{ $loop->iteration }}</td>
                                 <td>{{ $post->judul }}</td>
                                 <td>{{ $post->kategori }}</td>
-                                <td>{{ $post->tag }}</td>
-                                <td>{{ $post->author_id }}</td>
+                                {{-- <td>{{ $post->tag }}</td> --}}
+                                {{-- <td>{{ $post->author_id }}</td> --}}
                                 <td>
                                     <div class="btn-group">
                                         <a href="/admin/post/{{ $post->id }}" class="text-white">
@@ -95,8 +95,8 @@
                             <th>No</th>
                             <th>Judul</th>
                             <th>Kategori</th>
-                            <th>Tag</th>
-                            <th>Author</th>
+                            {{-- <th>Tag</th> --}}
+                            {{-- <th>Author</th> --}}
                             <th>Aksi</th>
                         </tr>
                     </tfoot>

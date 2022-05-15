@@ -146,3 +146,22 @@
 .contact-wrapper p {
     margin-bottom: 0px;
 }
+
+/* Comment Reply */
+.comment-reply {
+    margin-left: 40px;
+    font-size: 12px;
+}
+
+.font-small {
+    font-size: 12px;
+}
+
+.form-nama {
+    height: 27px;
+}
+
+.btn-reply {
+    font-size: 12px;
+    padding: 5px 10px;
+}

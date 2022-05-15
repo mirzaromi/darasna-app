@@ -68,9 +68,16 @@
     <script src="/assets/admin/plugins/bs-stepper/js/bs-stepper.min.js"></script>
     <!-- dropzonejs -->
     <script src="/assets/admin/plugins/dropzone/min/dropzone.min.js"></script>
+    <!-- Select2 -->
+    <script src="/assets/admin/plugins/select2/js/select2.full.min.js"></script>
     <script>
         $(function() {
+            $('.select2').select2()
 
+            //Initialize Select2 Elements
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
             //Datemask dd/mm/yyyy
             $('#datemask').inputmask('dd/mm/yyyy', {
                 'placeholder': 'dd/mm/yyyy'
