@@ -6,8 +6,9 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AuthorController;
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,13 +56,14 @@ Route::get('/contact', function() {
 
 Route::resource('/comment',CommentController::class);
 
+Route::get('/admin/home', [DashboardController::class,'index'])->middleware('auth');
 
-Route::get('/admin/home', function(){
-    return view('admin.index',[
-        'title1' => 'dashboard',
-        'title2' => ''
-    ]);
-})->middleware('auth');
+// Route::get('/admin/home', function(){
+//     return view('admin.index',[
+//         'title1' => 'dashboard',
+//         'title2' => ''
+//     ]);
+// })->middleware('auth');
 
 Route::get('/admin/post/like',[PostController::class,'like'])->name('like')->middleware('guest');
 Route::get('/admin/post/check_slug', [PostController::class, 'check_slug'])->middleware('auth');

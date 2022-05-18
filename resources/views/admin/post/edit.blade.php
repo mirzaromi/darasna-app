@@ -42,6 +42,15 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        <label>Kategori</label>
+                        <select class="form-control select2bs4" style="width: 100%;">
+                            @foreach ($kategori as $k)
+                                <option value="{{ old('kategori',$k->kategori) }}">{{ $k->kategori }}</option>
+                            @endforeach
+
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="">Kategori</label>
                         <input type="text" class="form-control @error('kategori') is-invalid @enderror" id=""
                             placeholder="Input Kategori" value="{{ old('kategori', $post->kategori) }}" name="kategori" required>

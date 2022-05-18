@@ -54,7 +54,7 @@
                         <label>Kategori</label>
                         <select class="form-control select2bs4" style="width: 100%;">
                             @foreach ($kategori as $k)
-                                <option>{{ $k->kategori }}</option>
+                                <option value="{{ $k->kategori }}">{{ $k->kategori }}</option>
                             @endforeach
 
                         </select>
@@ -98,7 +98,7 @@
                                 <label for="">Sebelum Paragraf Berapa?</label>
                                 <input type="text" class="form-control @error('before_parag') is-invalid @enderror"
                                     id="before_parag" placeholder="Input sebelum paragraf berapa?" name="before_parag"
-                                    value="{{ old('before_parag') }}" required>
+                                    value="{{ old('before_parag') }}" >
                                 @error('before_parag')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -131,7 +131,7 @@
                                 <label for="">Pada Paragraf Berapa?</label>
                                 <input type="text" class="form-control @error('on_parag') is-invalid @enderror"
                                     id="on_parag" placeholder="Input pada paragraf berapa?" name="on_parag"
-                                    value="{{ old('on_parag') }}" required>
+                                    value="{{ old('on_parag') }}" >
                                 @error('on_parag')
                                     <div class="invalid-feedback">
                                         {{ $message }}
