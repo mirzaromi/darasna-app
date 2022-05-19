@@ -38,7 +38,7 @@
                                 <span class="meta-category-small"><a
                                         class="post-category-color-text"
                                         style="background:#d800f9"
-                                        href="/category/{{ $p->kategori }}">Techno</a></span>
+                                        href="/category/{{ $p->kategori }}">{{ $p->kategori }}</a></span>
                                 <h3 class="feature-post-title"><a
                                         href="/post/{{ $p->slug }}">
                                         {{ $p->judul }}</a></h3>

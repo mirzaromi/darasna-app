@@ -16,16 +16,12 @@ class DashboardController extends Controller
 
         $comments = Author::where('id',auth()->user()->author_id)->get();
 
-        $comment_sum = 0;
+        // $comment_sum = 0;
 
-        foreach ($comments as $comment) {
-            foreach ($comment->post as $c) {
-                $comment_sum = $c->comment->count();
-            }
-            $comment->post->comment->count();
+        $id_posts = Post::where('author_id',auth()->user()->author_id)->select('id')->get();
+        $comment_sum = Comment::whereIn('post_id', $id_posts)->count();
 
-        }
-
+        // dd($comment_sum);
         return view('admin.index',[
             'title1' => 'dashboard',
             'title2' => '',

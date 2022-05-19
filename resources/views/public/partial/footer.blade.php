@@ -32,7 +32,7 @@
                     <div id="disto_recent_post_widget-3" class="widget post_list_widget">
                         <div class="widget_jl_wrapper"> <span class="jl_none_space"></span>
                             <div class="widget-title">
-                                <h2>Get in Touch</h2>
+                                <h2>Location</h2>
                             </div>
                             <div>
                                 <ul class="feature-post-list recent-post-widget">

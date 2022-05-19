@@ -50,7 +50,7 @@
 
                         </select>
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="">Kategori</label>
                         <input type="text" class="form-control @error('kategori') is-invalid @enderror" id=""
                             placeholder="Input Kategori" value="{{ old('kategori', $post->kategori) }}" name="kategori" required>
@@ -59,7 +59,7 @@
                                 {{ $message }}
                             </div>
                         @enderror
-                    </div>
+                    </div> --}}
                     <div class="form-group">
                         <label for="exampleInputFile">Upload Image</label>
                         <div class="input-group">

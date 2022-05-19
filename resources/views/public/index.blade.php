@@ -281,13 +281,15 @@
                                 <div class="col-md-4 blog_grid_post_style  jl_row_1">
                                     <div class="jl_grid_box_wrapper">
                                         <div class="image-post-thumb">
-                                            <a href="" class="link_image featured-thumbnail"
-                                                title="">
-                                                <img width="400" height="280" src="{{url('insta/')}}/{{'images'.$key.'.png'}}"
-                                                    class="attachment-disto_slider_grid_small size-disto_slider_grid_small wp-post-image img_insta"
-                                                    alt="" />
-                                                <div class="background_over_image"></div>
-                                            </a> 
+                                            <div class="insta-image-center">
+                                                <a href="" class="link_image featured-thumbnail"
+                                                    title="">
+                                                    <img width="400" height="280" src="{{url('insta/')}}/{{'images'.$key.'.png'}}"
+                                                        class="attachment-disto_slider_grid_small size-disto_slider_grid_small wp-post-image img_insta"
+                                                        alt="" />
+                                                    <div class="background_over_image"></div>
+                                                </a> 
+                                            </div>
                                         </div>
                                         <div class="post-entry-content">
                                             {{-- <h3 class="image-post-title"><a href="/assets/disto/#">
