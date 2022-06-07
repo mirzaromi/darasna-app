@@ -90,10 +90,10 @@
                                 class="jl_close_1"></span><span class="jl_close_2"></span></span>
                     </div>
                     <ul id="mobile_menu_slide" class="menu_moble_slide">
-                        <li class="menu-item"> <a href="">Home<span
+                        <li class="menu-item"> <a href="/">Home<span
                                     class="border-menu"></span></a>
                         </li>
-                        <li class="menu-item menu-item-has-children"> <a href="">Profile<span
+                        <li class="menu-item menu-item-has-children"> <a href="#">Profile<span
                                     class="border-menu"></span></a>
                             <ul class="sub-menu">
                                 <li class="menu-item"> <a href="/profile/about-us">About Us<span
@@ -104,19 +104,19 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-item menu-item-has-children"> <a href="">Kategori<span
+                        <li class="menu-item menu-item-has-children"> <a href="#">Kategori<span
                                     class="border-menu"></span></a>
                             <ul class="sub-menu">
-                                <li class="menu-item"> <a href="">AKIDAH<span
+                                <li class="menu-item"> <a href="/category/AKIDAH">AKIDAH<span
                                             class="border-menu"></span></a>
                                 </li>
-                                <li class="menu-item"> <a href="">HUKUM<span
+                                <li class="menu-item"> <a href="/category/HUKUM">HUKUM<span
                                             class="border-menu"></span></a>
                                 </li>
-                                <li class="menu-item"><a href="">SEJARAH<span
+                                <li class="menu-item"><a href="/category/SEJARAH">SEJARAH<span
                                             class="border-menu"></span></a>
                                 </li>
-                                <li class="menu-item"><a href="">TOKOH<span
+                                <li class="menu-item"><a href="/category/TOKOH">TOKOH<span
                                             class="border-menu"></span></a>
                                 </li>
                             </ul>

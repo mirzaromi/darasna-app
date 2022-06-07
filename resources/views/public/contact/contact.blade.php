@@ -35,8 +35,8 @@
                                                 <h6>Alamat</h6>
                                                 <p>Jalan Raya Tirtowening No.17, Bendunganjati, Pacet, Bendorejo, Bendunganjati, Kec. Pacet, Kabupaten Mojokerto, Jawa Timur 61374</p>
                                                 <h6>Nomor Telp</h6>
-                                                <p>088899999999</p>
-                                                <p>088899999999</p>
+                                                <a href="https://wa.me/6281359495248"><p>+62 813-5949-5248</p></a>
+                                                
                                                 <h6>Email</h6>
                                                 <p>darasna@gmail.com</p>
                                             </div>

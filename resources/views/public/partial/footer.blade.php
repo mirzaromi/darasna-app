@@ -9,8 +9,7 @@
                                 <h2>About us</h2>
                             </div>
                             <div class="jellywp_about_us_widget_wrapper">
-                                <p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut
-                                    imperdiet eu, iaculis a sem imperdiet ut imperdiet.</p>
+                                <p>Darasna Network bermaksud memberikan informasi berupa materi-materi keislaman dengan rujukan yang tepercaya, jelas dan cepat serta akurat. Latar belakang keberadaan Darasna Network ini berawal dari cita-cita sederhana untuk mewujudkan satu platform keislaman rujukan yang mengedepankan prinsip moderat dengan berbasis pada ajaran Ahlus Sunnah wa al Jamaah.</p>
                                 <div class="social_icons_widget">
                                     <ul class="social-icons-list-widget icons_about_widget_display">
                                         <li><a href="https://www.instagram.com/darasna.network/" class="instagram"
@@ -37,8 +36,11 @@
                             <div>
                                 <ul class="feature-post-list recent-post-widget">
                                     <li>
-                                        <p style="color: #999; margin: 0px">Jl. Raya Bendunganjati No 17, Pacet,
-                                            Mojokerto, Jawa Timur 61374 • +62 321 6855722 | 085784661611</p>
+                                        <a href="https://g.page/ikhac-ac-id?share"><p style="color: #999; margin: 0px">Jl. Raya Bendunganjati No 17, Pacet,
+                                            Mojokerto, Jawa Timur 61374 • +62 321 6855722 | 085784661611</p></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/6281359495248"><p>+62 813-5949-5248</p></a>
                                     </li>
                                     <li>
                                         <a href="mailto:darasna@gmail.com" target="_blank">
